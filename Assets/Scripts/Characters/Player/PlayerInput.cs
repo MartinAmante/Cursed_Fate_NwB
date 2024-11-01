@@ -27,7 +27,7 @@ public class PlayerInput : MonoBehaviour {
             if (Input.GetButton("Attack")) attack();
             if (Input.GetButton("Protect")) { protect(); } else { protectRelease(); }
             if (Input.GetButton("Interact")) interact();
-            if (Input.GetButton("Interact"))interactChest(); 
+            //if (Input.GetButton("InteractChest"))interactChest(); 
         }
     }
 }
