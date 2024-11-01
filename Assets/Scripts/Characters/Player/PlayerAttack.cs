@@ -16,25 +16,13 @@ public class PlayerAttack : MonoBehaviour{
     }
 
     void Attack(){
-        if(!player.IsAttacking && !player.IsAttackOnCooldown && !player.IsAttackingFire)
-        {
-            StartCoroutine(Attack1());                  
+        if(!player.IsAttacking && !player.IsAttackOnCooldown){
+            player.IsAttacking = true;
+            StartCoroutine(Attack1());
         }
     }
 
     IEnumerator Attack1(){
-        if (hitbox != null)
-        {
-            Destroy(hitbox);
-        }
-        if (!player.IsOnFire)
-          {
-             player.IsAttacking = true;
-          }
-          else
-          {           
-            player.IsAttackingFire = true;
-          }     
         hitbox = Instantiate(player.WeaponList[player.Weapon].Hitbox, hitboxField);
         start = player.WeaponList[player.Weapon].HitboxStart;
         finish = player.WeaponList[player.Weapon].HitboxFinish;
@@ -46,7 +34,6 @@ public class PlayerAttack : MonoBehaviour{
         yield return new WaitForSeconds(player.WeaponList[player.Weapon].AttackDuration);
         Destroy(hitbox);
         player.IsAttacking = false;
-        player.IsAttackingFire = false;
         player.IsAttackOnCooldown = true;
         yield return new WaitForSeconds(player.WeaponList[player.Weapon].AttackCooldown);
         attackProgress = 0f;

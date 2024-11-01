@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 1142540642226661566}
   - component: {fileID: 8852763116397157791}
   - component: {fileID: 6264847179062914857}
+  - component: {fileID: -6741289302548564123}
   - component: {fileID: 4104251981119548746}
   - component: {fileID: 2618285507668949256}
   - component: {fileID: 1447446073605020669}
@@ -206,6 +207,8 @@ MonoBehaviour:
     m_Bits: 8
   enemy: {fileID: 11400000, guid: ed1b77c603e86334e82582e8c3c623e5, type: 2}
   enemyData: {fileID: 11400000, guid: 6b293819004fc614f9bcc7b361afc523, type: 2}
+  controlSonido: {fileID: -6741289302548564123}
+  attackSound: {fileID: 8300000, guid: 96bfdb229b0387d4b8e78e8010fa9ac4, type: 3}
   tiempoEspera: 1
 --- !u!114 &6264847179062914857
 MonoBehaviour:
@@ -220,8 +223,105 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   chara: {fileID: 11400000, guid: ed1b77c603e86334e82582e8c3c623e5, type: 2}
-  healthBar: {fileID: 1868041467784750167}
   enemyData: {fileID: 11400000, guid: 6b293819004fc614f9bcc7b361afc523, type: 2}
+  controlSonido: {fileID: -6741289302548564123}
+  deathSound: {fileID: 8300000, guid: a47f01bbc1f96ff4393d7ca987faa61e, type: 3}
+--- !u!82 &-6741289302548564123
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3797351952719406879}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!114 &4104251981119548746
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -461,17 +561,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e001519ab160a8640aa4cf95f8c897ab, type: 3}
---- !u!114 &1868041467784750167 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 5198721744936924859, guid: e001519ab160a8640aa4cf95f8c897ab, type: 3}
-  m_PrefabInstance: {fileID: 5893255002118558444}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!224 &1868041468496010234 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 5198721745379739926, guid: e001519ab160a8640aa4cf95f8c897ab, type: 3}

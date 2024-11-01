@@ -24,12 +24,8 @@ public class CharacterData : ScriptableObject{
     [SerializeField]private bool isDashing;
     [SerializeField]private bool isDashOnCooldown;
     [SerializeField]private bool isAttacking;
-    [SerializeField] private bool isAttackingFire;
     [SerializeField]private bool isAttackOnCooldown;
     [SerializeField]private bool isProtecting;
-    [SerializeField]private bool isInteracting;
-    [SerializeField] private bool isNearParchment;
-    [SerializeField] private bool isNearChest;
 
     void OnEnable(){
         moveSpeed = normalSpeed;
@@ -43,8 +39,6 @@ public class CharacterData : ScriptableObject{
         isDashing = false;
         isAttacking = false;
         isProtecting = false;
-        isInteracting = false;
-        isNearParchment = false;
     }
 
     public int Health {get {return health;} set {health = value;}}
@@ -67,10 +61,6 @@ public class CharacterData : ScriptableObject{
     public bool IsDashing {get {return isDashing;} set {isDashing = value;}}
     public bool IsDashOnCooldown { get { return isDashOnCooldown; } set { isDashOnCooldown = value; } }
     public bool IsAttacking {get {return isAttacking;} set {isAttacking = value;}}
-    public bool IsAttackingFire { get { return isAttackingFire; } set { isAttackingFire = value; } }
     public bool IsAttackOnCooldown { get { return isAttackOnCooldown; } set { isAttackOnCooldown = value; } }
     public bool IsProtecting {get {return isProtecting;} set {isProtecting = value;}}
-    public bool IsInteracting{ get { return isInteracting; }set { isInteracting = value; } }
-    public bool IsNearParchment { get { return isNearParchment;} set { isNearParchment = value;}}
-    public bool IsNearChest { get { return isNearChest; } set { isNearChest = value; } }
 }

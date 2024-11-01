@@ -17,5 +17,6 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 73daf706282877f44825949731f6c807, type: 2}
   detectionRange: 20
   reactionTime: 0.8
-  waitTime: 1
+  waitTime: 2
   isAlert: 1
+  isSpawning: 0
