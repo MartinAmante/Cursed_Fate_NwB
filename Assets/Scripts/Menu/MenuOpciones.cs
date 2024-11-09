@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.Audio;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class MenuOpciones : MonoBehaviour
 {
@@ -12,39 +13,16 @@ public class MenuOpciones : MonoBehaviour
     public TMPro.TMP_Dropdown resolutionDropDown;
 
     Resolution[] resolutions;
-    
-    void Start()
+
+    public void CambiarResolucion(int width, int height)
     {
-        resolutions = Screen.resolutions;
-
-        resolutionDropDown.ClearOptions();
-
-        List<string> options = new List<string>();
-
-        int currentResolutionIndex = 0;
-
-        for (int i = 0; i < resolutions.Length; i++)
-        {
-            string option = resolutions[i].width + " x " + resolutions[i].height;
-            options.Add(option);
-
-            if (resolutions[i].width  == Screen.currentResolution.width &&
-                resolutions[i].height == Screen.currentResolution.height)
-            {
-                currentResolutionIndex = i;
-            }
-        }
-
-        resolutionDropDown.AddOptions(options);
-        resolutionDropDown.value = currentResolutionIndex;
-        resolutionDropDown.RefreshShownValue();
+        Screen.SetResolution(width, height, Screen.fullScreen);
     }
 
-    public void SetResolutions(int resolutionIndex)
-    {
-        Resolution resolution = resolutions[resolutionIndex];
-        Screen.SetResolution(resolution.width, resolution.height, Screen.fullScreen);
-    }
+    public void SetResolution1280x720() { Screen.SetResolution(1280, 720, FullScreenMode.Windowed); }
+    public void SetResolution1920x1080() { Screen.SetResolution(1920, 1080, FullScreenMode.Windowed); }
+    public void SetResolution1440x900() { Screen.SetResolution(1440, 900, FullScreenMode.Windowed); }
+
     public void SetVolume(float volume)
     {
         Debug.Log(volume);
@@ -54,6 +32,13 @@ public class MenuOpciones : MonoBehaviour
     public void SetFullScreen(bool isFullScreen)
     {
         Screen.fullScreen = isFullScreen;
+    }
+
+    public void ReturnMenue(string NombreMenu)
+    {
+        SceneManager.LoadScene(NombreMenu);
+        Time.timeScale = 1;
+
     }
 
 }
