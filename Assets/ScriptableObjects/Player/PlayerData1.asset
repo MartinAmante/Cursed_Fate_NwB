@@ -21,8 +21,8 @@ MonoBehaviour:
   - {fileID: 11400000, guid: a2dd7457ba0afff428656928f7545880, type: 2}
   - {fileID: 11400000, guid: 650d42872c5fc534ea7b9fd6fd2a435d, type: 2}
   - {fileID: 11400000, guid: df2d6c4c2e8035743831ce4b8605ba47, type: 2}
-  moveSpeed: 14
-  normalSpeed: 14
+  moveSpeed: 5
+  normalSpeed: 5
   runSpeed: 4
   dashSpeed: 20
   dashLength: 0.5

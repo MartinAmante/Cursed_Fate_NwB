@@ -18,6 +18,7 @@ GameObject:
   - component: {fileID: 7559685797355712838}
   - component: {fileID: 6317370667163639997}
   - component: {fileID: 124195188181271149}
+  - component: {fileID: -237987932311577224}
   m_Layer: 7
   m_Name: OldGuardianTerminado
   m_TagString: Enemy
@@ -35,7 +36,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 4.93, y: -2.17, z: 0.11}
-  m_LocalScale: {x: 12, y: 12, z: 6}
+  m_LocalScale: {x: 7, y: 7, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1398502331683875547}
@@ -236,7 +237,7 @@ MonoBehaviour:
   jugador: {fileID: 0}
   capaJugador:
     serializedVersion: 2
-    m_Bits: 8
+    m_Bits: 0
   enemy: {fileID: 11400000, guid: 1461603e58d3db74498edd8b9ed07dfd, type: 2}
   enemyData: {fileID: 11400000, guid: dcc8e5f6457c5b74bb09cfe44805bc0b, type: 2}
 --- !u!114 &7559685797355712838
@@ -283,6 +284,20 @@ MonoBehaviour:
   enemyData: {fileID: 11400000, guid: dcc8e5f6457c5b74bb09cfe44805bc0b, type: 2}
   sprite: {fileID: 3825390121300410649}
   anim: {fileID: 4989159245255947273}
+--- !u!114 &-237987932311577224
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 98406758460947291}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bc84243db63804f4bacad8edf1b8851e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 0}
+  speed: 3
 --- !u!1001 &6579173652332798925
 PrefabInstance:
   m_ObjectHideFlags: 0

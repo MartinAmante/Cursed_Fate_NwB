@@ -18,6 +18,7 @@ GameObject:
   - component: {fileID: 6480937301449237849}
   - component: {fileID: 4927361667112414220}
   - component: {fileID: 2766319434186593894}
+  - component: {fileID: -5373698589413856967}
   m_Layer: 7
   m_Name: GolemTerminado
   m_TagString: Enemy
@@ -35,7 +36,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 7, y: 7, z: 3}
+  m_LocalScale: {x: 5, y: 5, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2880417399315115189}
@@ -236,7 +237,7 @@ MonoBehaviour:
   jugador: {fileID: 0}
   capaJugador:
     serializedVersion: 2
-    m_Bits: 8
+    m_Bits: 0
   enemy: {fileID: 11400000, guid: 88d140936edeec54c8b93b9d350bf25e, type: 2}
   enemyData: {fileID: 11400000, guid: cea307bf0048f7444bfd88ae730a8d41, type: 2}
 --- !u!114 &6480937301449237849
@@ -283,6 +284,20 @@ MonoBehaviour:
   enemyData: {fileID: 11400000, guid: cea307bf0048f7444bfd88ae730a8d41, type: 2}
   sprite: {fileID: 29957390967676770}
   anim: {fileID: 4400011496818170108}
+--- !u!114 &-5373698589413856967
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3478802632345558400}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bc84243db63804f4bacad8edf1b8851e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 0}
+  speed: 3
 --- !u!1001 &8060561246375470499
 PrefabInstance:
   m_ObjectHideFlags: 0

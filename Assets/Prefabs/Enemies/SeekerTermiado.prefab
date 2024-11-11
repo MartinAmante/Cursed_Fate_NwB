@@ -35,7 +35,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 6, y: 6, z: 4}
+  m_LocalScale: {x: 1.5, y: 1.5, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1868041468496010234}
@@ -203,7 +203,7 @@ MonoBehaviour:
   jugador: {fileID: 0}
   capaJugador:
     serializedVersion: 2
-    m_Bits: 8
+    m_Bits: 0
   enemy: {fileID: 11400000, guid: ed1b77c603e86334e82582e8c3c623e5, type: 2}
   enemyData: {fileID: 11400000, guid: 6b293819004fc614f9bcc7b361afc523, type: 2}
   tiempoEspera: 1
