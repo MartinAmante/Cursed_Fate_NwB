@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+
+
 public class MenuPausa : MonoBehaviour
 {
     public GameObject PauseMenue;
@@ -10,10 +12,8 @@ public class MenuPausa : MonoBehaviour
     public GameObject SalirMenue;
 
     public bool Pause = false;
-    void Start()
-    {
-        
-    }
+
+
 
     // Update is called once per frame
     void Update()
@@ -61,5 +61,7 @@ public class MenuPausa : MonoBehaviour
     public void ReturnMenue(string NombreMenu)
     {
         SceneManager.LoadScene(NombreMenu);
+        Time.timeScale = 1;
+
     }
 }

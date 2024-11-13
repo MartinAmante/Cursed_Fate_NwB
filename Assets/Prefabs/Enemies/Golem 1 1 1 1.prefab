@@ -229,10 +229,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c05dae03aec9a4e4f9c95bb3c5c28329, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  velMovimiento: 3
   jugador: {fileID: 0}
   capaJugador:
     serializedVersion: 2
-    m_Bits: 8
+    m_Bits: 0
   enemy: {fileID: 0}
   enemyData: {fileID: 0}

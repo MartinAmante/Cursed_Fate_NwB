@@ -5,14 +5,51 @@ using UnityEngine.SceneManagement;
 
 public class MenuPrincipal : MonoBehaviour
 {
-    public void IniciarNivel(string NombreNivel)
+    public Transform camara;
+    public Transform player;
+    public float duracion = 2f;
+    public Animator puertaAnim;
+
+
+    public void IniciarAnimacion()
     {
-        SceneManager.LoadScene(NombreNivel);
+        puertaAnim.SetTrigger("AbrirPuerta");
+
+        StartCoroutine(MoverCamara());
     }
+
+    IEnumerator MoverCamara()
+    {
+        Vector3 inicio = camara.position;
+        Vector3 fin = player.position;
+
+        float tiempo = 0;
+        while (tiempo < duracion)
+        {
+            camara.position = Vector3.Lerp(inicio, fin, tiempo / duracion);
+            tiempo += Time.deltaTime;
+            yield return null;
+        }
+        camara.position = fin;
+
+        CambioNivel();
+
+    }
+
+    public void CambioNivel()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);     
+    }
+
+    public void OptionMenu(string NombreMenu)
+    {
+        SceneManager.LoadScene(NombreMenu);
+
+    }
+
     public void CerrarJuego()
     {
         Application.Quit();
-        Debug.Log("Juego Cerrado"); 
+        Debug.Log("Juego Cerrado");
     }
-
 }

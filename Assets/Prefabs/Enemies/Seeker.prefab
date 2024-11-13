@@ -197,20 +197,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   velMovimiento: 3
-  tiempoReaccion: 0.8
   velocidad: 3
-  rangoAlerta: 4
-  espera: 0
-  camina: 0
-  gira: 0
-  estarAlerta: 0
   jugador: {fileID: 0}
   capaJugador:
     serializedVersion: 2
-    m_Bits: 8
-  Dano: 10
-  vida: 100
-  amount: 10
+    m_Bits: 0
+  enemy: {fileID: 0}
+  enemyData: {fileID: 0}
   tiempoEspera: 1
 --- !u!114 &358665909110042066
 MonoBehaviour:
@@ -225,7 +218,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   chara: {fileID: 11400000, guid: 15b8dfbd1dd209f40a37a838b8b3516d, type: 2}
-  visualHealth: {fileID: 0}
+  healthBar: {fileID: 0}
+  enemyData: {fileID: 0}
 --- !u!114 &291236758538717316
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -238,7 +232,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cafd5ae6c27f3f7479e1f4dd76f5da34, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  chara: {fileID: 11400000, guid: 15b8dfbd1dd209f40a37a838b8b3516d, type: 2}
+  weapon: {fileID: 0}
 --- !u!1001 &1684592830933826279
 PrefabInstance:
   m_ObjectHideFlags: 0
