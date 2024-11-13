@@ -2,8 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerInput : MonoBehaviour
-{
+public class PlayerInput : MonoBehaviour {
     [SerializeField] public CharacterData player;
     public delegate void DirectionalInput(float xAxis, float yAxis);
     public delegate void DashInput();
@@ -20,8 +19,7 @@ public class PlayerInput : MonoBehaviour
     public static InteractInput interact;
     public static InteractChestInput interactChest;
 
-    void Update()
-    {
+    void Update() {
         if (player.IsAlive)
         {
             direction(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
@@ -29,7 +27,7 @@ public class PlayerInput : MonoBehaviour
             if (Input.GetButton("Attack")) attack();
             if (Input.GetButton("Protect")) { protect(); } else { protectRelease(); }
             if (Input.GetButton("Interact")) interact();
-            if (Input.GetButton("InteractChest"))interactChest(); 
+            if (Input.GetButton("Interact"))interactChest(); 
         }
     }
 }
