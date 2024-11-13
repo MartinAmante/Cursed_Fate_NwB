@@ -4,24 +4,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class CambioEscenas : MonoBehaviour
-{
-    // Start is called before the first frame update
-    void Start()
-    {
+public class CambioEscenas : MonoBehaviour{
+    [SerializeField]private string sceneName;
 
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
-    private void OnTriggerEnter2D(Collider2D other)
-    {
-        if (other.tag == "Player")
-        {
-            SceneManager.LoadScene("Mapa Dos");
+    private void OnTriggerEnter2D(Collider2D other){
+        if (other.tag == "Player"){
+            SceneManager.LoadScene(sceneName);
         }
     }
 }
