@@ -24,12 +24,14 @@ public class CharacterData : ScriptableObject{
     [SerializeField]private bool isDashing;
     [SerializeField]private bool isDashOnCooldown;
     [SerializeField]private bool isAttacking;
+    [SerializeField] private bool isAttackingTwo;
     [SerializeField] private bool isAttackingFire;
     [SerializeField]private bool isAttackOnCooldown;
     [SerializeField]private bool isProtecting;
     [SerializeField]private bool isInteracting;
     [SerializeField] private bool isNearParchment;
     [SerializeField] private bool isNearChest;
+    [SerializeField] private bool isHurt;
 
     void OnEnable(){
         moveSpeed = normalSpeed;
@@ -42,6 +44,7 @@ public class CharacterData : ScriptableObject{
         isTurning = false;
         isDashing = false;
         isAttacking = false;
+        isAttackingTwo = false;
         isProtecting = false;
         isInteracting = false;
         isNearParchment = false;
@@ -73,4 +76,6 @@ public class CharacterData : ScriptableObject{
     public bool IsInteracting{ get { return isInteracting; }set { isInteracting = value; } }
     public bool IsNearParchment { get { return isNearParchment;} set { isNearParchment = value;}}
     public bool IsNearChest { get { return isNearChest; } set { isNearChest = value; } }
+    public bool IsHurt { get { return isHurt; } set { isHurt = value; } }
+    public bool IsAttackingTwo { get { return isAttackingTwo; } set { isAttackingTwo = value; } }
 }

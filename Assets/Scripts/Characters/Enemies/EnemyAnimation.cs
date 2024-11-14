@@ -16,6 +16,8 @@ public class EnemyAnimation : MonoBehaviour{
     public void Attack()
     {
         anim.SetBool("isAttacking", enemy.IsAttacking);
+        anim.SetBool("isAttackingTwo", enemy.IsAttackingTwo);
+        anim.SetBool("isHurt", enemy.IsHurt);
         anim.SetBool("isAttackOnCooldown", enemy.IsAttackOnCooldown);
         anim.SetBool("isOnFire", enemy.IsOnFire);
         anim.SetInteger("idWeapon", enemy.Weapon );
