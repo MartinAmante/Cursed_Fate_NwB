@@ -43,7 +43,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -72,7 +72,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 2
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -134,7 +134,175 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Mage Skeleton - animations-atk2-dust FX_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1
+        width: 160
+        height: 95
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e0c4883af3b64da459552329ec30db80
+      internalID: -1721421394
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mage Skeleton - animations-atk2-dust FX_1
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 1
+        width: 160
+        height: 95
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b5d7ef8422ebe334f8fd17ed150d6acb
+      internalID: 912672591
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mage Skeleton - animations-atk2-dust FX_2
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 1
+        width: 160
+        height: 95
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 974c230589ffc074fa5fe3fbfe28a5cb
+      internalID: 301871185
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mage Skeleton - animations-atk2-dust FX_3
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 1
+        width: 160
+        height: 95
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b9558c849341433459468ff203bf7dfb
+      internalID: 106777551
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mage Skeleton - animations-atk2-dust FX_4
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 1
+        width: 160
+        height: 95
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a993c9f55c3f6474194401e9ad1c0dbd
+      internalID: 824112424
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mage Skeleton - animations-atk2-dust FX_5
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 1
+        width: 160
+        height: 95
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c148a633fea1c4d4180d08ca57b77957
+      internalID: -935750117
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mage Skeleton - animations-atk2-dust FX_6
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 1
+        width: 160
+        height: 95
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee01c0af8d1125f4991857345e22a402
+      internalID: -2044802490
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mage Skeleton - animations-atk2-dust FX_7
+      rect:
+        serializedVersion: 2
+        x: 1120
+        y: 1
+        width: 160
+        height: 95
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7016cd6c8ea8b254e950cc969dec7bb5
+      internalID: 1138611116
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -145,7 +313,15 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Mage Skeleton - animations-atk2-dust FX_0: -1721421394
+      Mage Skeleton - animations-atk2-dust FX_1: 912672591
+      Mage Skeleton - animations-atk2-dust FX_2: 301871185
+      Mage Skeleton - animations-atk2-dust FX_3: 106777551
+      Mage Skeleton - animations-atk2-dust FX_4: 824112424
+      Mage Skeleton - animations-atk2-dust FX_5: -935750117
+      Mage Skeleton - animations-atk2-dust FX_6: -2044802490
+      Mage Skeleton - animations-atk2-dust FX_7: 1138611116
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -10,11 +10,12 @@ TagManager:
   - Enemy
   - Chest
   - Portal
+  - Wall
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Player
   - Water
   - UI
   - 
