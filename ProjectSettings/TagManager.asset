@@ -3,15 +3,18 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - PlayerSpawner
+  - Enemy
+  - PlayerWeaponHitbox
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - PlayerFinal
   - Water
   - UI
-  - 
+  - Enemy
   - 
   - 
   - 
