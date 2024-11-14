@@ -12,10 +12,15 @@ public class Enemy1 : MonoBehaviour
     public Transform playerTransform;
     public LayerMask Player;
     private bool isAttackOne;
-    //private bool isAttackTwo;
+    private bool isAttackTwo;
+    private bool isCooldownAttack = false;
+    private bool isCooldownAttackTwo = false;
+    private bool isTakingDamage = false;
     public GameObject circlePrefab;    
     public Transform spawner;
-    public bool isTakingDamage = false;
+    public float retreatSpeed = 10f;
+    private enum EnemyState { Follow, AttackOne, AttackTwo }
+    private EnemyState currentState = EnemyState.Follow;
 
 
     void Start()
@@ -32,32 +37,70 @@ public class Enemy1 : MonoBehaviour
     void Update()
     {
         isAttackOne = Physics2D.OverlapCircle(transform.position, enemyData.DetectionRange, Player);
-        // isAttackTwo = Physics2D.OverlapCircle(transform.position, enemyData.DetectionAttack, Player);
+        isAttackTwo = Physics2D.OverlapCircle(transform.position, enemyData.DetectionAttack, Player);
         if (isTakingDamage)
         {
             return; // Detiene cualquier otra lógica en el Update
         }
 
-        if (!isAttackOne)
-        {
-            enemyData.IsCooldownAttack = false;
-            enemy.IsAttacking = false;
-            enemy.IsWalking = true;
-            Follow();
-        }
-        else 
-        {
-            enemy.IsWalking = false;           
-            if (!enemyData.IsCooldownAttack)
-            {
-                enemy.IsAttacking = true;
-                StartCoroutine(AttackOne());
-            }  
-        
-        }
+        float distanceToPlayer = Vector2.Distance(transform.position, playerTransform.position);
+        UpdateState(distanceToPlayer);
+        ExecuteState();
         Flip();
 
+    }
+    void UpdateState(float distanceToPlayer)
+    {
+        if (distanceToPlayer <= enemyData.DetectionAttack) // Ataque cercano
+        {
+            currentState = EnemyState.AttackTwo;
+        }
+        else if (distanceToPlayer <= enemyData.DetectionRange) // Ataque lejano
+        {
+            currentState = EnemyState.AttackOne;
+        }
+        else // Fuera de rango de ataque
+        {
+            currentState = EnemyState.Follow;
+        }
+    }
 
+    void ExecuteState()
+    {
+        switch (currentState)
+        {        
+            case EnemyState.Follow:
+
+                hitboxAttack2.SetActive(false);
+                isCooldownAttack = false;
+                isCooldownAttackTwo = false;
+                enemy.IsAttacking = false;
+                enemy.IsWalking = true;
+                Follow();
+                break;
+
+            case EnemyState.AttackOne:
+                if (!isCooldownAttack)
+                {
+                    hitboxAttack2.SetActive(false);
+                    isCooldownAttackTwo = false;
+                    enemy.IsWalking = false;
+                    StartCoroutine(AttackOne());
+                }
+                break;
+
+            case EnemyState.AttackTwo:
+                if (!isCooldownAttackTwo)
+                {
+                    isCooldownAttack = false;
+                    isCooldownAttackTwo = false;
+                    hitboxAttack2.SetActive(false);
+                    enemy.IsAttacking = false;
+                    //enemy.IsWalking = false;
+                    StartCoroutine(AttackTwo());
+                }
+                break;
+        }
     }
 
     void Follow()
@@ -71,40 +114,49 @@ public class Enemy1 : MonoBehaviour
 
     IEnumerator AttackOne()
     {
-        enemyData.IsCooldownAttack = true;
+        if (enemy.IsAttacking) yield break;
+
+        isCooldownAttack = true;
+        enemy.IsAttacking = true;
         yield return new WaitForSeconds(enemyData.IsCooldownMid);
+
         GameObject circle = Instantiate(circlePrefab, spawner.position, Quaternion.identity);
         Rigidbody2D rb = circle.GetComponent<Rigidbody2D>();
         Vector2 direction = transform.localScale.x > 0 ? Vector2.right : Vector2.left;
         rb.velocity = direction * enemy.RunSpeed;
         Destroy(circle, 3f);
+
         enemy.IsAttacking = false;
         yield return new WaitForSeconds(enemyData.IsCooldown);
-        enemyData.IsCooldownAttack = false;
+        isCooldownAttack = false;
     }
 
     IEnumerator AttackTwo()
     {
-        enemyData.IsCooldownAttackTwo = true;
+        isCooldownAttackTwo = true;
+        enemy.IsAttackingTwo = true;
+
         hitboxAttack2.SetActive(true);
-        yield return new WaitForSeconds(enemyData.IsCooldown);
+        yield return new WaitForSeconds(enemyData.IsCooldownAnimTwo);
         hitboxAttack2.SetActive(false);
-        enemyData.IsCooldownAttackTwo = false;
+
+        Vector2 direction = (transform.position - playerTransform.position).normalized;
+        transform.position += (Vector3)direction * retreatSpeed * Time.deltaTime;
+
+        enemy.IsAttackingTwo = false;
+        enemy.IsWalking = true;
+        isCooldownAttackTwo = false;
     }
 
     void Hurt()
     {
         if (!isTakingDamage)
         {
-            isTakingDamage = true; // Cambia el estado a "recibiendo daño"
-            StopAllCoroutines(); // Detiene todas las corrutinas, como los ataques
+            isTakingDamage = true; 
+            StopAllCoroutines(); 
             enemy.IsAttacking = false;
             enemy.IsWalking = false;
-
-            // Reproduce la animación de recibir daño
             enemy.IsHurt = true;
-
-            // Espera un breve periodo antes de permitir que el enemigo vuelva a la acción
             StartCoroutine(RecoverFromDamage());
         }
     }
@@ -113,7 +165,7 @@ public class Enemy1 : MonoBehaviour
     {
         yield return new WaitForSeconds(0.5f);
         enemy.IsHurt = false;
-        isTakingDamage = false; // Permite que el enemigo vuelva a sus acciones normales
+        isTakingDamage= false; 
     }
 
     void Flip()
@@ -121,12 +173,10 @@ public class Enemy1 : MonoBehaviour
 
         if (playerTransform.position.x < transform.position.x)
         {
-            // Voltear hacia la izquierda
             transform.localScale = new Vector3(-2, 2, 1);
         }
         else
         {
-            // Voltear hacia la derecha
             transform.localScale = new Vector3(2, 2, 1);
         }
     }
@@ -134,12 +184,11 @@ public class Enemy1 : MonoBehaviour
     private void OnDrawGizmos()
     {
         Gizmos.DrawWireSphere(transform.position, enemyData.DetectionRange);
-       // Gizmos.DrawWireSphere(transform.position, enemyData.DetectionAttack);
+        Gizmos.DrawWireSphere(transform.position, enemyData.DetectionAttack);
     }
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        // Verifica si el enemigo toca al jugador
         if (other.CompareTag("PlayerWeaponHitbox"))
         {
             Hurt();

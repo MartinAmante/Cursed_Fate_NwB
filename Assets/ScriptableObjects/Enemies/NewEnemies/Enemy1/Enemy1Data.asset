@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 16ca0ab21afcc1b4b80562f7a374ec16, type: 3}
   m_Name: Enemy1Data
   m_EditorClassIdentifier: 
-  health: 100
+  health: 0
   maxHealth: 100
   lifes: 1
   maxLifes: 1
@@ -26,14 +26,15 @@ MonoBehaviour:
   dashSpeed: 0
   dashLength: 0
   dashCooldown: 0
-  isAlive: 1
+  isAlive: 0
   isOnFire: 0
-  isWaiting: 1
+  isWaiting: 0
   isWalking: 0
   isTurning: 0
   isDashing: 0
   isDashOnCooldown: 0
   isAttacking: 0
+  isAttackingTwo: 0
   isAttackingFire: 0
   isAttackOnCooldown: 0
   isProtecting: 0
