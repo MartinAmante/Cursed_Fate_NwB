@@ -32,6 +32,7 @@ public class CharacterData : ScriptableObject{
     [SerializeField] private bool isNearParchment;
     [SerializeField] private bool isNearChest;
     [SerializeField] private bool isHurt;
+    [SerializeField] private bool isSpawning;
 
     void OnEnable(){
         moveSpeed = normalSpeed;
@@ -78,4 +79,5 @@ public class CharacterData : ScriptableObject{
     public bool IsNearChest { get { return isNearChest; } set { isNearChest = value; } }
     public bool IsHurt { get { return isHurt; } set { isHurt = value; } }
     public bool IsAttackingTwo { get { return isAttackingTwo; } set { isAttackingTwo = value; } }
+    public bool IsSpawning { get { return isSpawning; } set { isSpawning = value; } }
 }

@@ -7,6 +7,7 @@ public class EnemyData : ScriptableObject{
     [SerializeField] private int weapon;
     [SerializeField] private List<WeaponData> weaponList = new List<WeaponData>();
     [SerializeField] private float detectionRange;
+    [SerializeField] private float detectionSpawn;
     [SerializeField] private float reactionTime;
     [SerializeField] private float waitTime;
     [SerializeField] private float detectionAttack;
@@ -41,4 +42,5 @@ public class EnemyData : ScriptableObject{
     public float IsCooldownMid { get { return isCooldownMid; } set { isCooldownMid = value; } }
     public bool IsCooldownAttackTwo { get { return isCooldownAttackTwo; } set { isCooldownAttackTwo = value; } }
     public bool IsTakingDamage { get { return isTakingDamage; } set { isTakingDamage = value; } }
+    public float DetectionSpawn { get { return detectionSpawn; } set { detectionSpawn = value; } }
 }

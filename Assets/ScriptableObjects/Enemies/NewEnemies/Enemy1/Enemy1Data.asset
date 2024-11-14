@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 16ca0ab21afcc1b4b80562f7a374ec16, type: 3}
   m_Name: Enemy1Data
   m_EditorClassIdentifier: 
-  health: 0
+  health: -20
   maxHealth: 100
   lifes: 1
   maxLifes: 1
@@ -34,7 +34,7 @@ MonoBehaviour:
   isDashing: 0
   isDashOnCooldown: 0
   isAttacking: 0
-  isAttackingTwo: 0
+  isAttackingTwo: 1
   isAttackingFire: 0
   isAttackOnCooldown: 0
   isProtecting: 0
@@ -42,3 +42,4 @@ MonoBehaviour:
   isNearParchment: 0
   isNearChest: 0
   isHurt: 0
+  isSpawning: 0

@@ -27,6 +27,7 @@ public class Enemy1 : MonoBehaviour
     {
         enemy.IsWalking = false;
         enemy.IsWaiting = false;
+        enemy.IsHurt = false;
         GameObject playerObject = GameObject.FindGameObjectWithTag("Player");
         if (playerObject != null)
         {
