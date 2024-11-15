@@ -18,5 +18,5 @@ MonoBehaviour:
   attackCooldown: 1
   isOnFire: 0
   hitbox: {fileID: 8617256768648252561, guid: 36afadf0dfa49c04db5c7248f0748977, type: 3}
-  hitboxStart: 30
-  hitboxFinish: -90
+  hitboxStart: 120
+  hitboxFinish: -10
