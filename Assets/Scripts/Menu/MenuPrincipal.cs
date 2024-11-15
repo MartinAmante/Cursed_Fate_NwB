@@ -9,13 +9,21 @@ public class MenuPrincipal : MonoBehaviour
     public Transform player;
     public float duracion = 2f;
     public Animator puertaAnim;
+    
+    AudioManager audioManager;
 
+    private void Awake()
+    {
+        audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
+    }
 
     public void IniciarAnimacion()
     {
         puertaAnim.SetTrigger("AbrirPuerta");
 
         StartCoroutine(MoverCamara());
+
+        audioManager.PlaySFX(audioManager.Door);
     }
 
     IEnumerator MoverCamara()
