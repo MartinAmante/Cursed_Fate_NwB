@@ -10,7 +10,7 @@ TagManager:
   - Enemy
   - Chest
   - Portal
-  - Wall
+  - Audio
   layers:
   - Default
   - TransparentFX
