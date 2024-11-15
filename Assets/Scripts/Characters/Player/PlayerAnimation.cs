@@ -14,8 +14,8 @@ public class CharacterAnimation : MonoBehaviour{
     public void Attack(){
         anim.SetInteger("idWeapon", chara.Weapon);
         anim.SetBool("isAttacking", chara.IsAttacking);
+        anim.SetBool("isAttackingFire", chara.IsAttackingFire);
         anim.SetBool("isAttackOnCooldown", chara.IsAttackOnCooldown);
-        anim.SetBool("isOnFire", chara.IsOnFire);
     }
 
     public void Movement(){

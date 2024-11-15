@@ -1,7 +1,27 @@
 fileFormatVersion: 2
-guid: 142e9f0b0c0e587429d6619de84452e5
-DefaultImporter:
+guid: 63b00ea99dc0c2744a9033bebb6a4c78
+ScriptedImporter:
+  internalIDToNameTable: []
   externalObjects: {}
+  serializedVersion: 2
   userData: 
   assetBundleName: 
   assetBundleVariant: 
+  script: {fileID: 11500000, guid: cc34d0f3dc257a442819830b408c5322, type: 3}
+  missingFiles:
+  - ../../../TiledMap Editor (ALL TEMPLATES)/Tile collision templates/tile - !!1.tx
+  errors:
+  - 'Missing template file: ../../../TiledMap Editor (ALL TEMPLATES)/Tile collision
+    templates/tile - !!1.tx'
+  - Invalid rectangle (Tile ID ='98') in tileset 'Tileset - wall 2' has zero width
+  warnings: []
+  missingSortingLayers: []
+  missingLayers: []
+  missingTags: []
+  importerVersion: 13
+  pixelsPerUnit: 32
+  edgesPerEllipse: 16
+  numberOfObjectsImported: 483
+  useSpriteAtlas: 1
+  atlasWidth: 2048
+  atlasHeight: 2048

@@ -16,6 +16,5 @@ MonoBehaviour:
   weaponList: []
   detectionRange: 5
   reactionTime: 0.8
-  waitTime: 3
+  waitTime: 2
   isAlert: 0
-  isSpawning: 0

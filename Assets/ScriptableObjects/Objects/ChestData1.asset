@@ -16,8 +16,8 @@ MonoBehaviour:
   cooldownAnimation: 5
   cooldownInteract: 0.2
   parchmentList:
-  - {fileID: 1482271664096125362, guid: 763ccc5d828cbff4698610a7b166678b, type: 3}
-  - {fileID: 1398090350892888334, guid: 77d853f5065ef344e8f0308888025b4d, type: 3}
-  - {fileID: 4366457204215521313, guid: 7f86fdf6f45969a41b220524543fb45b, type: 3}
-  - {fileID: 1595867681553092136, guid: 57c824923ca07ef4a82f1729e7a38df3, type: 3}
-  islooted: 0
+  - {fileID: 3335531136808091228, guid: 17ce960afb4c5714dad4d8571c1278fe, type: 3}
+  - {fileID: 4804901870909457277, guid: b29c6779124b451478d633d7e49be5e4, type: 3}
+  - {fileID: 3184895786809104064, guid: 7122a8575f25c5a4d8719df1c4e686d5, type: 3}
+  - {fileID: 997255605628024893, guid: ed268e9eb03a45d41b50f9c4410f627c, type: 3}
+  islooted: 1

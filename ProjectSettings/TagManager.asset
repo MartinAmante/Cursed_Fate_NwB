@@ -5,16 +5,20 @@ TagManager:
   serializedVersion: 2
   tags:
   - PlayerSpawner
-  - Enemy
+  - PowerUp
   - PlayerWeaponHitbox
+  - Enemy
+  - Chest
+  - Portal
+  - Audio
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - PlayerFinal
+  - Player
   - Water
   - UI
-  - Enemy
+  - 
   - 
   - 
   - 

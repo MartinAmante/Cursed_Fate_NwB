@@ -10,7 +10,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -2253911629886400664, guid: 09282c9ce1ff47548a5ea099b2f7150a, type: 3}
       propertyPath: m_Name
-      value: Demon 2 1 1
+      value: Demon
       objectReference: {fileID: 0}
     - target: {fileID: 1160356261127867848, guid: 09282c9ce1ff47548a5ea099b2f7150a, type: 3}
       propertyPath: m_Controller
@@ -220,6 +220,5 @@ MonoBehaviour:
   jugador: {fileID: 0}
   capaJugador:
     serializedVersion: 2
-    m_Bits: 8
-  Dano: 10
-  vida: 100
+    m_Bits: 0
+  enemy: {fileID: 0}

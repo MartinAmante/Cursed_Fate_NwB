@@ -1,0 +1,43 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 16ca0ab21afcc1b4b80562f7a374ec16, type: 3}
+  m_Name: BossData
+  m_EditorClassIdentifier: 
+  health: 0
+  maxHealth: 0
+  lifes: 0
+  maxLifes: 0
+  weapon: 0
+  weaponList: []
+  moveSpeed: 0
+  normalSpeed: 0
+  runSpeed: 0
+  dashSpeed: 0
+  dashLength: 0
+  dashCooldown: 0
+  isAlive: 1
+  isOnFire: 0
+  isWaiting: 0
+  isWalking: 0
+  isTurning: 0
+  isDashing: 0
+  isDashOnCooldown: 0
+  isAttacking: 0
+  isAttackingTwo: 0
+  isAttackingFire: 0
+  isAttackOnCooldown: 0
+  isProtecting: 0
+  isInteracting: 0
+  isNearParchment: 0
+  isNearChest: 0
+  isHurt: 0
+  isSpawning: 1
