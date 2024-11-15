@@ -10,6 +10,7 @@ public class Portal : MonoBehaviour
     [SerializeField] private int enemigosEliminados;
 
     private Animator animator;
+    private bool portalActivo = false;
     void Start()
     {
         animator= GetComponent<Animator>();
@@ -18,6 +19,7 @@ public class Portal : MonoBehaviour
 
     private void ActivarPortal()
     {
+        portalActivo = true;
         animator.SetTrigger("Activar");
     }
 
@@ -38,7 +40,7 @@ public class Portal : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.CompareTag("Player") || enemigosEliminados == cantidadEnemigos)
+        if (other.CompareTag("Player") || enemigosEliminados == cantidadEnemigos || portalActivo)
             { 
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         }
