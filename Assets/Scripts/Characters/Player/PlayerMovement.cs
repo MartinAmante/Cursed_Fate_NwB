@@ -4,11 +4,12 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour{
     [SerializeField]private CharacterData player;
-    [SerializeField]private Rigidbody2D rb2d;
+    private Rigidbody2D rb2d;
     [SerializeField]private Vector2 moveInput;
 
     void Start(){
         PlayerInput.direction += Move;
+        rb2d = GetComponent<Rigidbody2D>();
     }
 
     void Move(float xAxis, float yAxis){
