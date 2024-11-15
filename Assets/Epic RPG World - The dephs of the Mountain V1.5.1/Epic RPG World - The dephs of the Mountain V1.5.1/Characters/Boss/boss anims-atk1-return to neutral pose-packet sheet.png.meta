@@ -43,7 +43,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -72,7 +72,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 2
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -134,7 +134,322 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: boss anims-atk1-return to neutral pose-packet sheet_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 621
+        width: 351
+        height: 207
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 25092d2588591fd41bad44fe4efb5c76
+      internalID: -2145223317
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss anims-atk1-return to neutral pose-packet sheet_1
+      rect:
+        serializedVersion: 2
+        x: 351
+        y: 621
+        width: 351
+        height: 207
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f0662f48c9a8bef4fab383bbf8d04ce8
+      internalID: -260475197
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss anims-atk1-return to neutral pose-packet sheet_2
+      rect:
+        serializedVersion: 2
+        x: 702
+        y: 621
+        width: 351
+        height: 207
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 47dd824f5f1f222468872374df69e4ce
+      internalID: -1088596894
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss anims-atk1-return to neutral pose-packet sheet_3
+      rect:
+        serializedVersion: 2
+        x: 1053
+        y: 621
+        width: 351
+        height: 207
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b871f716451de2f448848d6e9a5b0049
+      internalID: 1494824566
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss anims-atk1-return to neutral pose-packet sheet_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 414
+        width: 351
+        height: 207
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a75c0aac3e902ac41af78e2ad8efc1db
+      internalID: 1477946625
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss anims-atk1-return to neutral pose-packet sheet_5
+      rect:
+        serializedVersion: 2
+        x: 351
+        y: 414
+        width: 351
+        height: 207
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e3169cea012e0d4b995c0aa32b81ae2
+      internalID: -148598773
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss anims-atk1-return to neutral pose-packet sheet_6
+      rect:
+        serializedVersion: 2
+        x: 702
+        y: 414
+        width: 351
+        height: 207
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8f1102eac9aeb844b8febd50bb81d3e5
+      internalID: -1919887736
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss anims-atk1-return to neutral pose-packet sheet_7
+      rect:
+        serializedVersion: 2
+        x: 1053
+        y: 414
+        width: 351
+        height: 207
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a26d65ee9e5701446973d7e04c75d341
+      internalID: 1146547905
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss anims-atk1-return to neutral pose-packet sheet_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 207
+        width: 351
+        height: 207
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a00c023d4adc1e843bfaa990f51eb03f
+      internalID: 795422310
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss anims-atk1-return to neutral pose-packet sheet_9
+      rect:
+        serializedVersion: 2
+        x: 351
+        y: 207
+        width: 351
+        height: 207
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b36e6fd7de51d5e4bb468efc649eea93
+      internalID: 396005211
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss anims-atk1-return to neutral pose-packet sheet_10
+      rect:
+        serializedVersion: 2
+        x: 702
+        y: 207
+        width: 351
+        height: 207
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 178d9e07f84cf874180abe384075595b
+      internalID: -620559989
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss anims-atk1-return to neutral pose-packet sheet_11
+      rect:
+        serializedVersion: 2
+        x: 1053
+        y: 207
+        width: 351
+        height: 207
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6d95fa15ee6f44640be17fcda38e2d83
+      internalID: 2039775226
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss anims-atk1-return to neutral pose-packet sheet_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 351
+        height: 207
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d5702a17ade04f54590ef80db0d28b66
+      internalID: -1806048671
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss anims-atk1-return to neutral pose-packet sheet_13
+      rect:
+        serializedVersion: 2
+        x: 351
+        y: 0
+        width: 351
+        height: 207
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b12ef9f28f180f40b301effb8c78841
+      internalID: 395054468
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: boss anims-atk1-return to neutral pose-packet sheet_14
+      rect:
+        serializedVersion: 2
+        x: 702
+        y: 0
+        width: 351
+        height: 207
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 09331ec584c6ea14c9fdc7126cdc8324
+      internalID: -1741960302
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -145,7 +460,22 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      boss anims-atk1-return to neutral pose-packet sheet_0: -2145223317
+      boss anims-atk1-return to neutral pose-packet sheet_1: -260475197
+      boss anims-atk1-return to neutral pose-packet sheet_10: -620559989
+      boss anims-atk1-return to neutral pose-packet sheet_11: 2039775226
+      boss anims-atk1-return to neutral pose-packet sheet_12: -1806048671
+      boss anims-atk1-return to neutral pose-packet sheet_13: 395054468
+      boss anims-atk1-return to neutral pose-packet sheet_14: -1741960302
+      boss anims-atk1-return to neutral pose-packet sheet_2: -1088596894
+      boss anims-atk1-return to neutral pose-packet sheet_3: 1494824566
+      boss anims-atk1-return to neutral pose-packet sheet_4: 1477946625
+      boss anims-atk1-return to neutral pose-packet sheet_5: -148598773
+      boss anims-atk1-return to neutral pose-packet sheet_6: -1919887736
+      boss anims-atk1-return to neutral pose-packet sheet_7: 1146547905
+      boss anims-atk1-return to neutral pose-packet sheet_8: 795422310
+      boss anims-atk1-return to neutral pose-packet sheet_9: 396005211
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -9,6 +9,7 @@ public class PlayerInteractChest : MonoBehaviour
     [SerializeField] private ChestBehaviour chestBehaviour;
     void Start()
     {
+        chest.Islooted = false;
         PlayerInput.interactChest += Interact;
         //chestBehaviour = FindObjectOfType<ChestBehaviour>();
     }

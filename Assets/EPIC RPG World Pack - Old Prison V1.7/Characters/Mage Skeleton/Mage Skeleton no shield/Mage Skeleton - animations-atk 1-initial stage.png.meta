@@ -43,7 +43,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -72,7 +72,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 2
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -134,7 +134,133 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Mage Skeleton - animations-atk 1-initial stage_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3
+        width: 220
+        height: 217
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 894bd921eab757f419bb4ba9e79b1593
+      internalID: 1369460669
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mage Skeleton - animations-atk 1-initial stage_1
+      rect:
+        serializedVersion: 2
+        x: 220
+        y: 3
+        width: 220
+        height: 217
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ecc12420b32e7748ac976ed38da6b19
+      internalID: 1327231445
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mage Skeleton - animations-atk 1-initial stage_2
+      rect:
+        serializedVersion: 2
+        x: 440
+        y: 3
+        width: 220
+        height: 217
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9899fe4113ee502458b7d99fc01a63b6
+      internalID: -1993860687
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mage Skeleton - animations-atk 1-initial stage_3
+      rect:
+        serializedVersion: 2
+        x: 660
+        y: 3
+        width: 220
+        height: 217
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1074f6e2fd7336148b942968187aafcb
+      internalID: -1807140117
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mage Skeleton - animations-atk 1-initial stage_4
+      rect:
+        serializedVersion: 2
+        x: 880
+        y: 3
+        width: 220
+        height: 217
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0b6f0cd192361e84b91f684a5bc686bb
+      internalID: 869751347
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mage Skeleton - animations-atk 1-initial stage_5
+      rect:
+        serializedVersion: 2
+        x: 1100
+        y: 3
+        width: 220
+        height: 217
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9053fc30b37f1174fb92657b0efad7b3
+      internalID: -1938530475
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -145,7 +271,13 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Mage Skeleton - animations-atk 1-initial stage_0: 1369460669
+      Mage Skeleton - animations-atk 1-initial stage_1: 1327231445
+      Mage Skeleton - animations-atk 1-initial stage_2: -1993860687
+      Mage Skeleton - animations-atk 1-initial stage_3: -1807140117
+      Mage Skeleton - animations-atk 1-initial stage_4: 869751347
+      Mage Skeleton - animations-atk 1-initial stage_5: -1938530475
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
