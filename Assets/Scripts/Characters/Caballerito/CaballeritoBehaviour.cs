@@ -55,9 +55,7 @@ public class CaballeritoBehaviour : MonoBehaviour
     private void WaitingState()
     {
         Collider2D playerCollider = Physics2D.OverlapCircle(transform.position, detectionRange, enemyLayer);
-        caballeritoData.IsWaiting = true;
-        caballeritoData.IsAttacking = false;
-        caballeritoData.IsWalking = false;
+        
         if (playerCollider)
         {
                 enemyPosition = playerCollider.transform;
@@ -65,27 +63,33 @@ public class CaballeritoBehaviour : MonoBehaviour
         }
         else if (!playerCollider)
         {
+
             if (Vector2.Distance(transform.position, playerPosition.position) > stopPosition)
             {
+                caballeritoData.IsWaiting = false;
+                caballeritoData.IsWalking = true;
                 if (transform.position.x < playerPosition.position.x)
                 {
                     transform.rotation = Quaternion.Euler(0, 180, 0);
                     Vector2 tVe2;
-                    caballeritoData.IsWalking = true;
-                    caballeritoData.IsWaiting = false;
                     tVe2 = Vector2.MoveTowards(transform.position, playerPosition.position, caballeritoData.MoveSpeed * Time.deltaTime);
                     this.transform.position = tVe2;
+
                 }
                 else
                 {
                     transform.rotation = Quaternion.Euler(0, 0, 0);
                     Vector2 tVe2;
-                    caballeritoData.IsWalking = true;
-                    caballeritoData.IsWaiting = false;
                     tVe2 = Vector2.MoveTowards(transform.position, playerPosition.position, caballeritoData.MoveSpeed * Time.deltaTime);
                     this.transform.position = tVe2;
                 }    
                 
+            }
+            else
+            {
+                caballeritoData.IsWaiting = true;
+                caballeritoData.IsAttacking = false;
+                caballeritoData.IsWalking = false;
             }
         }
     }
@@ -134,17 +138,20 @@ public class CaballeritoBehaviour : MonoBehaviour
     }
     private void ReturningState()
     {
-        caballeritoData.IsWaiting = false;
-        caballeritoData.IsAttacking = false;
-        caballeritoData.IsWalking = true;
         if (transform.position.x < playerPosition.position.x)
         {
+            caballeritoData.IsWaiting = false;
+            caballeritoData.IsAttacking = false;
+            caballeritoData.IsWalking = true;
             transform.rotation = Quaternion.Euler(0, 180, 0);
             Vector3 returnPosition = new Vector3(playerPosition.position.x -2f, playerPosition.position.y, playerPosition.position.z);
             transform.position = Vector2.MoveTowards(transform.position, returnPosition, caballeritoData.MoveSpeed * Time.deltaTime);
         }
         else
         {
+            caballeritoData.IsWaiting = false;
+            caballeritoData.IsAttacking = false;
+            caballeritoData.IsWalking = true;
             transform.rotation = Quaternion.Euler(0, 0, 0);
             Vector3 returnPosition = new Vector3(playerPosition.position.x + 2f, playerPosition.position.y, playerPosition.position.z);
             transform.position = Vector2.MoveTowards(transform.position, returnPosition, caballeritoData.MoveSpeed * Time.deltaTime);
