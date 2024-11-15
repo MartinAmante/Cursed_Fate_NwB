@@ -11,7 +11,7 @@ public class EnemyData : ScriptableObject{
     [SerializeField] private float reactionTime;
     [SerializeField] private float waitTime;
     [SerializeField] private float detectionAttack;
-    [SerializeField] private int isCooldown;
+    [SerializeField] private float isCooldown;
     [SerializeField] private int isCooldownAnimTwo;
     [SerializeField] private float isCooldownMid;
     [SerializeField] private bool isAlert;
@@ -36,7 +36,7 @@ public class EnemyData : ScriptableObject{
     public bool IsAlert {get {return isAlert;} set {isAlert = value;}}
     public bool IsSpawning { get { return isSpawning; } set { isSpawning = value; } }
     public bool IsCooldownAttack { get { return isCooldownAttack; } set { isCooldownAttack = value; } }
-    public int IsCooldown { get { return isCooldown; } set { isCooldown = value; } }
+    public float IsCooldown { get { return isCooldown; } set { isCooldown = value; } }
     public int IsCooldownAnimTwo { get { return isCooldownAnimTwo; } set { isCooldownAnimTwo = value; } }
     public float DetectionAttack { get { return detectionAttack; } set { detectionAttack = value; } }
     public float IsCooldownMid { get { return isCooldownMid; } set { isCooldownMid = value; } }
