@@ -11,9 +11,7 @@ public class Enemy2 : MonoBehaviour
     public Transform playerTransform;
     public LayerMask Player;
     private bool isAttackOne;
-    private bool isAttackTwo;
     private bool isCooldownAttack = false;
-    private bool isCooldownAttackTwo = false;
     private bool isTakingDamage = false;
     public float retreatSpeed = 10f;
     private enum EnemyState { Follow, AttackOne, AttackTwo }
@@ -34,8 +32,7 @@ public class Enemy2 : MonoBehaviour
 
     void Update()
     {
-        isAttackOne = Physics2D.OverlapCircle(transform.position, enemyData.DetectionRange, Player);
-        isAttackTwo = Physics2D.OverlapCircle(transform.position, enemyData.DetectionAttack, Player);
+        isAttackOne = Physics2D.OverlapCircle(transform.position, enemyData.DetectionRange, Player);       
         if (isTakingDamage)
         {
             return; // Detiene cualquier otra lógica en el Update
@@ -49,11 +46,7 @@ public class Enemy2 : MonoBehaviour
     }
     void UpdateState(float distanceToPlayer)
     {
-        if (distanceToPlayer <= enemyData.DetectionAttack) // Ataque cercano
-        {
-            currentState = EnemyState.AttackTwo;
-        }
-        else if (distanceToPlayer <= enemyData.DetectionRange) // Ataque lejano
+        if (distanceToPlayer <= enemyData.DetectionRange) // Ataque lejano
         {
             currentState = EnemyState.AttackOne;
         }
@@ -71,7 +64,6 @@ public class Enemy2 : MonoBehaviour
 
                 
                 isCooldownAttack = false;
-                isCooldownAttackTwo = false;
                 enemy.IsAttacking = false;
                 enemy.IsWalking = true;
                 Follow();
@@ -80,20 +72,8 @@ public class Enemy2 : MonoBehaviour
             case EnemyState.AttackOne:
                 if (!isCooldownAttack)
                 {
-                    isCooldownAttackTwo = false;
                     enemy.IsWalking = false;
                     StartCoroutine(AttackOne());
-                }
-                break;
-
-            case EnemyState.AttackTwo:
-                if (!isCooldownAttackTwo)
-                {
-                    isCooldownAttack = false;
-                    isCooldownAttackTwo = false;
-                    enemy.IsAttacking = false;
-                    //enemy.IsWalking = false;
-                    StartCoroutine(AttackTwo());
                 }
                 break;
         }
@@ -121,20 +101,6 @@ public class Enemy2 : MonoBehaviour
         enemy.IsAttacking = false;       
         yield return new WaitForSeconds(enemyData.IsCooldown);
         isCooldownAttack = false;
-    }
-
-    IEnumerator AttackTwo()
-    {
-        isCooldownAttackTwo = true;
-        enemy.IsAttackingTwo = true;        
-        yield return new WaitForSeconds(enemyData.IsCooldownAnimTwo);
-
-        Vector2 direction = (transform.position - playerTransform.position).normalized;
-        transform.position += (Vector3)direction * retreatSpeed * Time.deltaTime;
-
-        enemy.IsAttackingTwo = false;
-        enemy.IsWalking = true;
-        isCooldownAttackTwo = false;
     }
 
     void Hurt()
@@ -172,8 +138,7 @@ public class Enemy2 : MonoBehaviour
 
     private void OnDrawGizmos()
     {
-        Gizmos.DrawWireSphere(transform.position, enemyData.DetectionRange);
-        Gizmos.DrawWireSphere(transform.position, enemyData.DetectionAttack);
+        Gizmos.DrawWireSphere(transform.position, enemyData.DetectionRange);       
     }
 
     void OnTriggerEnter2D(Collider2D other)
