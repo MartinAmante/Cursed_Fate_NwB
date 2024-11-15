@@ -10,6 +10,13 @@ public class Portal : MonoBehaviour
     [SerializeField] private int enemigosEliminados;
 
     private Animator animator;
+
+    AudioManager audioManager;
+
+    private void Awake()
+    {
+        audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
+    }
     void Start()
     {
         animator= GetComponent<Animator>();
@@ -19,6 +26,8 @@ public class Portal : MonoBehaviour
     private void ActivarPortal()
     {
         animator.SetTrigger("Activar");
+        audioManager.PlaySFX(audioManager.Portal);
+
     }
 
     public void EnemigoEliminado()
