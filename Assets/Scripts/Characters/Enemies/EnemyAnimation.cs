@@ -16,6 +16,8 @@ public class EnemyAnimation : MonoBehaviour{
     public void Attack()
     {
         anim.SetBool("isAttacking", enemy.IsAttacking);
+        anim.SetBool("isAttackingTwo", enemy.IsAttackingTwo);
+        anim.SetBool("isHurt", enemy.IsHurt);
         anim.SetBool("isAttackOnCooldown", enemy.IsAttackOnCooldown);
         anim.SetBool("isOnFire", enemy.IsOnFire);
         anim.SetInteger("idWeapon", enemy.Weapon );
@@ -23,7 +25,7 @@ public class EnemyAnimation : MonoBehaviour{
     public void Movement()
     {
         anim.SetBool("isAlive", enemy.IsAlive);
-        anim.SetBool("isSpawning", enemyData.IsSpawning);
+        anim.SetBool("isSpawning", enemy.IsSpawning);
         anim.SetBool("isWaiting", enemy.IsWaiting);
         anim.SetBool("isWalking", enemy.IsWalking);
         anim.SetBool("isDashing", enemy.IsDashing);

@@ -5,7 +5,7 @@ using static UnityEngine.GraphicsBuffer;
 
 public class Enemy5Behavoiur : MonoBehaviour
 {
-    [Header("Parï¿½metros de Movimiento")]
+    [Header("Parámetros de Movimiento")]
     public float velMovimiento;
     public float tiempoReaccion = 0.8f;
     public float velocidad = 3f;
@@ -14,12 +14,10 @@ public class Enemy5Behavoiur : MonoBehaviour
     [Header("Estados de Movimiento")]
     public bool espera, camina, gira, estarAlerta;
 
-    [Header("Otros Parï¿½metros")]
+    [Header("Otros Parámetros")]
     public Transform jugador;
     public LayerMask capaJugador;
     [SerializeField] private CharacterData enemy;
-    public AudioSource controlSonido;
-    public AudioClip attackSound;
     private int movimiento;
     private Animator animator;
     private Rigidbody2D rb;
@@ -30,7 +28,6 @@ public class Enemy5Behavoiur : MonoBehaviour
     {
         animator = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
-        jugador = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
         Accion();
     }
 
@@ -108,11 +105,10 @@ public class Enemy5Behavoiur : MonoBehaviour
         rb.velocity = Vector2.zero;
         enemy.IsWalking = false;
         enemy.IsAttacking = true;
-        if(enemy.IsAttacking && !controlSonido.isPlaying) controlSonido.PlayOneShot(attackSound);
     }
     void CambiarDireccion()
     {
-        // Cambiar la direcciï¿½n de movimiento a una direcciï¿½n aleatoria
+        // Cambiar la dirección de movimiento a una dirección aleatoria
         direccionMovimiento = new Vector2(Random.Range(-1f, 1f), Random.Range(-1f, 1f)).normalized;
         rb.velocity = direccionMovimiento * velMovimiento;
     }

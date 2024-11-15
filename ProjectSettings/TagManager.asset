@@ -10,11 +10,12 @@ TagManager:
   - Enemy
   - Chest
   - Portal
+  - Audio
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Player
   - Water
   - UI
   - 

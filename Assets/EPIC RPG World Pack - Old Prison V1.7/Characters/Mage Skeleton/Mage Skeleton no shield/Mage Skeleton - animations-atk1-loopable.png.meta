@@ -43,7 +43,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -72,7 +72,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 2
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -134,7 +134,175 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Mage Skeleton - animations-atk1-loopable_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3
+        width: 220
+        height: 217
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: da067f3bc6cbe8847a446b30e14b4bb4
+      internalID: 446556176
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mage Skeleton - animations-atk1-loopable_1
+      rect:
+        serializedVersion: 2
+        x: 220
+        y: 3
+        width: 220
+        height: 217
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4cf7e4e9e61f4714ba2e145a6ab4d757
+      internalID: -1873863421
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mage Skeleton - animations-atk1-loopable_2
+      rect:
+        serializedVersion: 2
+        x: 440
+        y: 3
+        width: 220
+        height: 217
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6636ee9f265d10145ba63e53769821d3
+      internalID: 1362701490
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mage Skeleton - animations-atk1-loopable_3
+      rect:
+        serializedVersion: 2
+        x: 660
+        y: 3
+        width: 220
+        height: 217
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c765944a434efe5428c312d79292b865
+      internalID: -1722099717
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mage Skeleton - animations-atk1-loopable_4
+      rect:
+        serializedVersion: 2
+        x: 880
+        y: 3
+        width: 220
+        height: 217
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b18594eadea55604ca4685b541f54760
+      internalID: -323133958
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mage Skeleton - animations-atk1-loopable_5
+      rect:
+        serializedVersion: 2
+        x: 1100
+        y: 3
+        width: 220
+        height: 217
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a445a700cf23584ea8f4d42e61e8b3d
+      internalID: -1636982635
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mage Skeleton - animations-atk1-loopable_6
+      rect:
+        serializedVersion: 2
+        x: 1320
+        y: 3
+        width: 220
+        height: 217
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 145d030491767e546bab3778b015e24d
+      internalID: 1193413057
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mage Skeleton - animations-atk1-loopable_7
+      rect:
+        serializedVersion: 2
+        x: 1540
+        y: 3
+        width: 220
+        height: 217
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eb1bef1a1ea21a24e82a3478cc2e88a0
+      internalID: -98543907
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -145,7 +313,15 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Mage Skeleton - animations-atk1-loopable_0: 446556176
+      Mage Skeleton - animations-atk1-loopable_1: -1873863421
+      Mage Skeleton - animations-atk1-loopable_2: 1362701490
+      Mage Skeleton - animations-atk1-loopable_3: -1722099717
+      Mage Skeleton - animations-atk1-loopable_4: -323133958
+      Mage Skeleton - animations-atk1-loopable_5: -1636982635
+      Mage Skeleton - animations-atk1-loopable_6: 1193413057
+      Mage Skeleton - animations-atk1-loopable_7: -98543907
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
