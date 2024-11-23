@@ -11,6 +11,7 @@ TagManager:
   - Chest
   - Portal
   - Audio
+  - Character
   layers:
   - Default
   - TransparentFX
@@ -18,7 +19,7 @@ TagManager:
   - Player
   - Water
   - UI
-  - 
+  - Enemy
   - 
   - 
   - 
