@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.U2D.Animation;
 using UnityEngine;
 
 public class Enemy2Behaviour : MonoBehaviour
@@ -7,8 +8,10 @@ public class Enemy2Behaviour : MonoBehaviour
     [Header("Otros Parámetros")]
     public Transform jugador;
     public LayerMask capaJugador;
-    [SerializeField] private CharacterData enemy;
+    //[SerializeField] private CharacterData enemy;
+    [SerializeField] private Enemy sproutData;
     [SerializeField] private EnemyData enemyData;
+    //[SerializeField] private WeaponData weaponData;
     private int movimiento;
     private Rigidbody2D rb;
     private Vector2 direccionMovimiento;
@@ -18,6 +21,12 @@ public class Enemy2Behaviour : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         //Accion();
+        sproutData = gameObject.GetComponent<Enemy>();
+
+
+
+
+
     }
 
     void Update()
@@ -27,8 +36,8 @@ public class Enemy2Behaviour : MonoBehaviour
         if (!enemyData.IsAlert)
         {
             ManejarMovimientoNormal();
-            enemy.IsWaiting = true;
-            enemy.IsWalking = false;
+            sproutData.chara.IsWaiting = true;
+            sproutData.chara.IsWalking = false;
         }
         else
         {
@@ -38,14 +47,14 @@ public class Enemy2Behaviour : MonoBehaviour
 
     void ManejarMovimientoNormal()
     {
-        enemy.IsAttacking = false;
+        sproutData.chara.IsAttacking = false;
 
-        if (enemy.IsWaiting)
+        if (sproutData.chara.IsWaiting)
         {
             rb.velocity = Vector2.zero;
-            enemy.IsWalking = false;
+            sproutData.chara.IsWalking = false;
         }
-        else if (enemy.IsTurning)
+        else if (sproutData.chara.IsTurning)
         {
             CambiarDireccion();
         }
@@ -68,39 +77,39 @@ public class Enemy2Behaviour : MonoBehaviour
 
     void PerseguirJugador()
     {
-        enemy.IsAttacking = false;
-        enemy.IsWaiting = false;
+        sproutData.chara.IsAttacking = false;
+        sproutData.chara.IsWaiting = false;
         if (transform.position.x < jugador.transform.position.x)
         {
-            enemy.IsTurning = false;
+            sproutData.chara.IsTurning = false;
             Vector2 direccion = (jugador.position - transform.position).normalized;
-            rb.velocity = direccion * enemy.RunSpeed;
-            enemy.IsWalking = true;
+            rb.velocity = direccion * sproutData.chara.RunSpeed;
+            sproutData.chara.IsWalking = true;
         }
         else
         {
-            enemy.IsTurning = true;
+            sproutData.chara.IsTurning = true;
             Vector2 direccion = (jugador.position - transform.position).normalized;
-            rb.velocity = direccion * enemy.RunSpeed;
-            enemy.IsWalking = true;
+            rb.velocity = direccion * sproutData.chara.RunSpeed;
+            sproutData.chara.IsWalking = true;
         }
     }
 
     void AtacarJugador()
     {
         rb.velocity = Vector2.zero;
-        enemy.IsWalking = false;
-        enemy.IsAttacking = true;
+        sproutData.chara    .IsWalking = false;
+        sproutData.chara.IsAttacking = true;
     }
     void CambiarDireccion()
     {
         // Cambiar la dirección de movimiento a una dirección aleatoria
         direccionMovimiento = new Vector2(Random.Range(-1f, 1f), Random.Range(-1f, 1f)).normalized;
-        rb.velocity = direccionMovimiento * enemy.NormalSpeed;
+        rb.velocity = direccionMovimiento * sproutData.chara.NormalSpeed;
     }
     public void FinalAnimacion()
     {
-        enemy.IsAttacking = false;
+        sproutData.chara.IsAttacking = false;
     }
 
     void Accion()
@@ -108,10 +117,10 @@ public class Enemy2Behaviour : MonoBehaviour
         movimiento = Random.Range(1, 2);
 
         //enemy.IsWalking = movimiento == 1;
-        enemy.IsWaiting = movimiento == 1;
-        enemy.IsTurning = movimiento == 2;
+        sproutData.chara.IsWaiting = movimiento == 1;
+        sproutData.chara.IsTurning = movimiento == 2;
 
-        if (enemy.IsTurning)
+        if (sproutData.chara.IsTurning)
         {
             StartCoroutine(TiempoGiro());
         }
@@ -122,12 +131,12 @@ public class Enemy2Behaviour : MonoBehaviour
     IEnumerator TiempoGiro()
     {
         yield return new WaitForSeconds(2);
-        enemy.IsTurning = false;
+        sproutData.chara.IsTurning = false;
     }
     public void Morir()
     {
-        enemy.IsWalking = false;
-        enemy.IsAttacking = false;
+        sproutData.chara.IsWalking = false;
+        sproutData.chara.IsAttacking = false;
 
     }
 
