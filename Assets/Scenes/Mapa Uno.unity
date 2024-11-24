@@ -13878,6 +13878,14 @@ PrefabInstance:
       propertyPath: m_AnchorMin.x
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5176933037617468835, guid: a1ca40130db56634b93fa2120a87ca43, type: 3}
+      propertyPath: m_ReferenceResolution.x
+      value: 1920
+      objectReference: {fileID: 0}
+    - target: {fileID: 5176933037617468835, guid: a1ca40130db56634b93fa2120a87ca43, type: 3}
+      propertyPath: m_ReferenceResolution.y
+      value: 1080
+      objectReference: {fileID: 0}
     - target: {fileID: 5598576420363084718, guid: a1ca40130db56634b93fa2120a87ca43, type: 3}
       propertyPath: m_AnchorMax.x
       value: 1
