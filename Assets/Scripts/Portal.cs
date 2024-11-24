@@ -12,16 +12,20 @@ public class Portal : MonoBehaviour
 
     private Animator animator;
     private bool portalActivo = false;
+    private Collider2D portalCollider;
     void Start()
     {
         animator= GetComponent<Animator>();
         cantidadEnemigos = GameObject.FindGameObjectsWithTag("Enemy").Length;
+        portalCollider = GetComponent<Collider2D>();
+        portalCollider.enabled = false;
     }
 
     private void ActivarPortal()
     {
         portalActivo = true;
         animator.SetTrigger("Activar");
+        portalCollider.enabled = true;
     }
 
     public void EnemigoEliminado()
