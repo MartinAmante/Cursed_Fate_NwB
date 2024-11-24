@@ -61,7 +61,7 @@ public class EnemyBehaviour : MonoBehaviour
         float distanciaAlJugador = Vector2.Distance(transform.position, jugador.position);
 
 
-        if (distanciaAlJugador > 5f)
+        if (distanciaAlJugador > 1f)
         {
             PerseguirJugador();
         }

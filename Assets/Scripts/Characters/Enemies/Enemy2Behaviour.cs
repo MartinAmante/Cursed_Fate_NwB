@@ -21,7 +21,11 @@ public class Enemy2Behaviour : MonoBehaviour
         //Accion();
         sproutData = gameObject.GetComponent<Enemy>();
 
-
+        GameObject playerObject = GameObject.FindGameObjectWithTag("Player");
+        if (playerObject != null)
+        {
+            jugador = playerObject.transform;
+        }
 
 
 
