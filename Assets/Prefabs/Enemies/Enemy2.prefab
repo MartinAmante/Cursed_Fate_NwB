@@ -195,7 +195,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8848c8ca9daa9134fae4aaab61f1cd93, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemy: {fileID: 11400000, guid: a0a76ba0fc6072649b159a3e0889e39e, type: 2}
+  enemy: {fileID: 4798650762084306954}
   enemyData: {fileID: 11400000, guid: 870f68162d4ea6947b1f98081df4ebaf, type: 2}
   sprite: {fileID: 3846949292123228493}
   anim: {fileID: 651588192721467538}
@@ -233,8 +233,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   chara: {fileID: 11400000, guid: a0a76ba0fc6072649b159a3e0889e39e, type: 2}
-  healthBar: {fileID: 0}
+  healthBar: {fileID: 4928155000731440323}
   enemyData: {fileID: 11400000, guid: 870f68162d4ea6947b1f98081df4ebaf, type: 2}
+  weaponList:
+  - {fileID: 11400000, guid: e920db4041a3acf499c0db7747cd217d, type: 2}
+  enemyID: 8
 --- !u!61 &8905815018003438576
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -610,6 +613,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e001519ab160a8640aa4cf95f8c897ab, type: 3}
+--- !u!114 &4928155000731440323 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5198721744936924859, guid: e001519ab160a8640aa4cf95f8c897ab, type: 3}
+  m_PrefabInstance: {fileID: 883201676582445688}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!224 &4928155001169947502 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 5198721745379739926, guid: e001519ab160a8640aa4cf95f8c897ab, type: 3}

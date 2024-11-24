@@ -10,10 +10,10 @@ public class SeekerBehaviour : MonoBehaviour
     [Header("Otros Parámetros")]
     public Transform jugador;
     public LayerMask capaJugador;
-    [SerializeField] private CharacterData enemy;
+    [SerializeField] private Enemy seekerData;
     [SerializeField] private EnemyData enemyData;
-    private int movimiento;
-    private Animator animator;
+    //private int movimiento;
+    //private Animator animator;
     private Rigidbody2D rb;
     private Vector2 direccionMovimiento;
     public bool tiempoEspera = true;
@@ -21,7 +21,7 @@ public class SeekerBehaviour : MonoBehaviour
 
     void Start()
     {
-        animator = GetComponent<Animator>();
+        //animator = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
         //Accion();
     }
@@ -42,15 +42,15 @@ public class SeekerBehaviour : MonoBehaviour
 
     void ManejarMovimientoNormal()
     {
-        enemy.IsAttacking = false;
-        enemy.IsWalking = false;
+        seekerData.chara.IsAttacking = false;
+        seekerData.chara.IsWalking = false;
 
-        if (enemy.IsWaiting)
+        if (seekerData.chara.IsWaiting)
         {
             rb.velocity = Vector2.zero;
-            enemy.IsWalking = false;
+            seekerData.chara.IsWalking = false;
         }
-        else if (enemy.IsTurning)
+        else if (seekerData.chara.IsTurning)
         {
             CambiarDireccion();
         }
@@ -61,7 +61,7 @@ public class SeekerBehaviour : MonoBehaviour
         if (tiempoEspera)
         {
             enemyData.IsSpawning = true;
-            enemy.IsWaiting = true;
+            seekerData.chara.IsWaiting = true;
             StartCoroutine(TiempoEspera());
             
 
@@ -91,30 +91,30 @@ public class SeekerBehaviour : MonoBehaviour
     }
     void PerseguirJugador()
     {
-        enemy.IsAttacking = false;
-        enemy.IsWaiting = false;
+        seekerData.chara.IsAttacking = false;
+        seekerData.chara.IsWaiting = false;
         if (transform.position.x < jugador.transform.position.x)
         {
-            enemy.IsTurning = false;
+            seekerData.chara.IsTurning = false;
             Vector2 direccion = (jugador.position - transform.position).normalized;
-            rb.velocity = direccion * enemy.RunSpeed;
-            enemy.IsWalking = true;
+            rb.velocity = direccion * seekerData.chara.RunSpeed;
+            seekerData.chara.IsWalking = true;
         }
         else
         {
-            enemy.IsTurning = true;
+            seekerData.chara.IsTurning = true;
             Vector2 direccion = (jugador.position - transform.position).normalized;
-            rb.velocity = direccion * enemy.RunSpeed;
-            enemy.IsWalking = true;
+            rb.velocity = direccion * seekerData.chara.RunSpeed;
+            seekerData.chara.IsWalking = true;
         }
     }
 
     void AtacarJugador()
     {
         rb.velocity = Vector2.zero;
-        enemy.IsWalking = false;
-        enemy.IsWaiting = false;
-        enemy.IsAttacking = true;
+        seekerData.chara.IsWalking = false;
+        seekerData.chara.IsWaiting = false;
+        seekerData.chara.IsAttacking = true;
     }
     void CambiarDireccion()
     {

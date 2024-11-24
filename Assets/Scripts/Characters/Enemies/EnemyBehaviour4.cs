@@ -10,7 +10,7 @@ public class EnemyBehaviour4 : MonoBehaviour
     private int movimiento;
     private Rigidbody2D rb;
     private Vector2 direccionMovimiento;
-    [SerializeField] private CharacterData enemy;
+    [SerializeField] private Enemy OGdata;
     [SerializeField] private EnemyData enemyData;
 
 
@@ -27,7 +27,7 @@ public class EnemyBehaviour4 : MonoBehaviour
         if (!enemyData.IsAlert)
         {
             ManejarMovimientoNormal();
-            enemy.IsWaiting = true;
+            OGdata.chara.IsWaiting = true;
         }
         else
         {
@@ -37,20 +37,20 @@ public class EnemyBehaviour4 : MonoBehaviour
 
     void ManejarMovimientoNormal()
     {
-        enemy.IsAttacking = false;
-        enemy.IsWaiting = false;
+        OGdata.chara.IsAttacking = false;
+        OGdata.chara.IsWaiting = false;
 
-        if (enemy.IsWalking)
+        if (OGdata.chara.IsWalking)
         {
-            rb.velocity = direccionMovimiento * enemy.MoveSpeed;
-            enemy.IsWalking = true;
+            rb.velocity = direccionMovimiento * OGdata.chara.MoveSpeed;
+            OGdata.chara.IsWalking = true;
         }
-        else if (enemy.IsWaiting)
+        else if (OGdata.chara.IsWaiting)
         {
             rb.velocity = Vector2.zero;
-            enemy.IsWalking = false;
+            OGdata.chara.IsWalking = false;
         }
-        else if (enemy.IsTurning)
+        else if (OGdata.chara.IsTurning)
         {
             CambiarDireccion();
         }
@@ -73,50 +73,50 @@ public class EnemyBehaviour4 : MonoBehaviour
 
     void PerseguirJugador()
     {
-        enemy.IsAttacking = false;
-        enemy.IsWaiting = false;
+        OGdata.chara.IsAttacking = false;
+        OGdata.chara.IsWaiting = false;
         if (transform.position.x < jugador.transform.position.x)
         {
-            enemy.IsTurning = false;
+            OGdata.chara.IsTurning = false;
             Vector2 direccion = (jugador.position - transform.position).normalized;
-            rb.velocity = direccion * enemy.RunSpeed;
-            enemy.IsWalking = true;
+            rb.velocity = direccion * OGdata.chara.RunSpeed;
+            OGdata.chara.IsWalking = true;
         }
         else
         {
-            enemy.IsTurning = true;
+            OGdata.chara.IsTurning = true;
             Vector2 direccion = (jugador.position - transform.position).normalized;
-            rb.velocity = direccion * enemy.RunSpeed;
-            enemy.IsWalking = true;
+            rb.velocity = direccion * OGdata.chara.RunSpeed;
+            OGdata.chara.IsWalking = true;
         }
     }
 
     void AtacarJugador()
     {
         rb.velocity = Vector2.zero;
-        enemy.IsWalking = false;
-        enemy.IsAttacking = true;
+        OGdata.chara.IsWalking = false;
+        OGdata.chara.IsAttacking = true;
     }
     void CambiarDireccion()
     {
         // Cambiar la dirección de movimiento a una dirección aleatoria
         direccionMovimiento = new Vector2(Random.Range(-1f, 1f), Random.Range(-1f, 1f)).normalized;
-        rb.velocity = direccionMovimiento * enemy.MoveSpeed;
+        rb.velocity = direccionMovimiento * OGdata.chara.MoveSpeed;
     }
     public void FinalAnimacion()
     {
-        enemy.IsAttacking = false;
+        OGdata.chara.IsAttacking = false;
     }
 
     void Accion()
     {
         movimiento = Random.Range(1, 4);
 
-        enemy.IsWalking = movimiento == 1;
-        enemy.IsWaiting = movimiento == 2;
-        enemy.IsTurning = movimiento == 3;
+        OGdata.chara.IsWalking = movimiento == 1;
+        OGdata.chara.IsWaiting = movimiento == 2;
+        OGdata.chara.IsTurning = movimiento == 3;
 
-        if (enemy.IsTurning)
+        if (OGdata.chara.IsTurning)
         {
             StartCoroutine(TiempoGiro());
         }
@@ -127,12 +127,12 @@ public class EnemyBehaviour4 : MonoBehaviour
     IEnumerator TiempoGiro()
     {
         yield return new WaitForSeconds(2);
-        enemy.IsTurning = false;
+        OGdata.chara.IsTurning = false;
     }
     public void Morir()
     {
-        enemy.IsWalking = false;
-        enemy.IsAttacking = false;
+        OGdata.chara.IsWalking = false;
+        OGdata.chara.IsAttacking = false;
 
     }
 

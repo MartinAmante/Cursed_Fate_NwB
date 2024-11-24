@@ -8,10 +8,8 @@ public class Enemy2Behaviour : MonoBehaviour
     [Header("Otros Parámetros")]
     public Transform jugador;
     public LayerMask capaJugador;
-    //[SerializeField] private CharacterData enemy;
     [SerializeField] private Enemy sproutData;
     [SerializeField] private EnemyData enemyData;
-    //[SerializeField] private WeaponData weaponData;
     private int movimiento;
     private Rigidbody2D rb;
     private Vector2 direccionMovimiento;
