@@ -237,7 +237,7 @@ MonoBehaviour:
   jugador: {fileID: 0}
   capaJugador:
     serializedVersion: 2
-    m_Bits: 8
+    m_Bits: 0
   enemy: {fileID: 11400000, guid: 88d140936edeec54c8b93b9d350bf25e, type: 2}
   enemyData: {fileID: 11400000, guid: cea307bf0048f7444bfd88ae730a8d41, type: 2}
 --- !u!114 &6480937301449237849
