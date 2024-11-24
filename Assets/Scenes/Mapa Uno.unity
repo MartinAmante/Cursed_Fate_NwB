@@ -8528,6 +8528,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1807532773049855575, guid: 06c8ba64f8a4a9042816f0ee1feb550c, type: 3}
+      propertyPath: playerPosition
+      value: 
+      objectReference: {fileID: 5852407645339224502}
     - target: {fileID: 3994248515513419896, guid: 06c8ba64f8a4a9042816f0ee1feb550c, type: 3}
       propertyPath: m_LocalPosition.x
       value: 41.563328
@@ -15855,6 +15859,11 @@ MonoBehaviour:
   player: {fileID: 11400000, guid: 15b8dfbd1dd209f40a37a838b8b3516d, type: 2}
   chest: {fileID: 11400000, guid: 6680be92af72a4b489445417333ef89d, type: 2}
   chestBehaviour: {fileID: 0}
+--- !u!4 &5852407645339224502 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6135060043993930841, guid: 8ed1af788d4d42042b1851bdaccce72e, type: 3}
+  m_PrefabInstance: {fileID: 8678583277407792602}
+  m_PrefabAsset: {fileID: 0}
 --- !u!224 &5878511344429558623
 RectTransform:
   m_ObjectHideFlags: 0
