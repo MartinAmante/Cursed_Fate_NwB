@@ -6,14 +6,24 @@ using UnityEngine.SceneManagement;
 
 public abstract class Character : MonoBehaviour{
     [SerializeField]public CharacterData chara;
-    [SerializeField]public Slider healthBar;
-
+    public Slider healthBar;
+    
     private void Awake(){
+        
+        if (gameObject.tag == "Enemy") 
+
+        {
+            chara = ScriptableObject.CreateInstance<CharacterData>();
+        }
+        else
+
         chara.Health = chara.MaxHealth;
-        healthBar.maxValue = chara.MaxHealth;
+        chara.Lifes = chara.MaxLifes;
+        
     }
 
     void Update(){
+        healthBar.maxValue = chara.MaxHealth;
         healthBar.value = chara.Health;
         chara.IsWaiting = !(!chara.IsAlive || chara.IsWalking || chara.IsAttacking || chara.IsAttackingFire || chara.IsDashing || chara.IsProtecting);
         if(!chara.IsAttacking && !chara.IsAttackingFire ){

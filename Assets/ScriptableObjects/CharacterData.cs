@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -80,4 +81,9 @@ public class CharacterData : ScriptableObject{
     public bool IsHurt { get { return isHurt; } set { isHurt = value; } }
     public bool IsAttackingTwo { get { return isAttackingTwo; } set { isAttackingTwo = value; } }
     public bool IsSpawning { get { return isSpawning; } set { isSpawning = value; } }
+
+    public static implicit operator CharacterData(GameObject v)
+    {
+        throw new NotImplementedException();
+    }
 }

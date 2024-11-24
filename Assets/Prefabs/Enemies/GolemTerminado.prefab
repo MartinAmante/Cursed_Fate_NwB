@@ -19,7 +19,7 @@ GameObject:
   - component: {fileID: 4927361667112414220}
   - component: {fileID: 2766319434186593894}
   - component: {fileID: -5373698589413856967}
-  m_Layer: 7
+  m_Layer: 6
   m_Name: GolemTerminado
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -36,7 +36,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 5, y: 5, z: 0}
+  m_LocalScale: {x: 2, y: 2, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2880417399315115189}
@@ -237,8 +237,8 @@ MonoBehaviour:
   jugador: {fileID: 0}
   capaJugador:
     serializedVersion: 2
-    m_Bits: 0
-  enemy: {fileID: 11400000, guid: 88d140936edeec54c8b93b9d350bf25e, type: 2}
+    m_Bits: 8
+  golemData: {fileID: 4927361667112414220}
   enemyData: {fileID: 11400000, guid: cea307bf0048f7444bfd88ae730a8d41, type: 2}
 --- !u!114 &6480937301449237849
 MonoBehaviour:
@@ -265,9 +265,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a0a498f6672174540a73b3224a492718, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  chara: {fileID: 11400000, guid: 88d140936edeec54c8b93b9d350bf25e, type: 2}
+  chara: {fileID: 0}
   healthBar: {fileID: 2880417399959261976}
   enemyData: {fileID: 11400000, guid: cea307bf0048f7444bfd88ae730a8d41, type: 2}
+  weaponList:
+  - {fileID: 11400000, guid: 85cb6ad57f1465e45aca0eafd41c2a55, type: 2}
+  enemyID: 5
 --- !u!114 &2766319434186593894
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -280,7 +283,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8848c8ca9daa9134fae4aaab61f1cd93, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemy: {fileID: 11400000, guid: 88d140936edeec54c8b93b9d350bf25e, type: 2}
+  enemy: {fileID: 4927361667112414220}
   enemyData: {fileID: 11400000, guid: cea307bf0048f7444bfd88ae730a8d41, type: 2}
   sprite: {fileID: 29957390967676770}
   anim: {fileID: 4400011496818170108}
@@ -336,7 +339,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5198721744936924861, guid: e001519ab160a8640aa4cf95f8c897ab, type: 3}
       propertyPath: m_Layer
-      value: 7
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 5198721745379739926, guid: e001519ab160a8640aa4cf95f8c897ab, type: 3}
       propertyPath: m_Pivot.x
@@ -448,11 +451,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5198721745379739930, guid: e001519ab160a8640aa4cf95f8c897ab, type: 3}
       propertyPath: m_Layer
-      value: 7
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 5198721745578373965, guid: e001519ab160a8640aa4cf95f8c897ab, type: 3}
       propertyPath: m_Layer
-      value: 7
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 5198721745750725130, guid: e001519ab160a8640aa4cf95f8c897ab, type: 3}
       propertyPath: m_AnchorMax.x
@@ -468,15 +471,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5198721745750725133, guid: e001519ab160a8640aa4cf95f8c897ab, type: 3}
       propertyPath: m_Layer
-      value: 7
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 5198721746220597191, guid: e001519ab160a8640aa4cf95f8c897ab, type: 3}
       propertyPath: m_Layer
-      value: 7
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 5198721746642634425, guid: e001519ab160a8640aa4cf95f8c897ab, type: 3}
       propertyPath: m_Layer
-      value: 7
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 5198721746756985426, guid: e001519ab160a8640aa4cf95f8c897ab, type: 3}
       propertyPath: m_AnchorMax.x
@@ -488,7 +491,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5198721746756985429, guid: e001519ab160a8640aa4cf95f8c897ab, type: 3}
       propertyPath: m_Layer
-      value: 7
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

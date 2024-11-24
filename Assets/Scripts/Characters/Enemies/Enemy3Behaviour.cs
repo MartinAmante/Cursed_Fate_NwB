@@ -10,7 +10,7 @@ public class Enemy3Behaviour : MonoBehaviour
     private int movimiento;
     private Rigidbody2D rb;
     private Vector2 direccionMovimiento;
-    [SerializeField] private CharacterData enemy;
+    [SerializeField] private Enemy skeletonData;
     [SerializeField] private EnemyData enemyData;
 
 
@@ -36,19 +36,19 @@ public class Enemy3Behaviour : MonoBehaviour
 
     void ManejarMovimientoNormal()
     {
-        enemy.IsAttacking = false;
+        skeletonData.chara.IsAttacking = false;
 
-        if (enemy.IsWalking)
+        if (skeletonData.chara.IsWalking)
         {
-            rb.velocity = direccionMovimiento * enemy.MoveSpeed;
-            enemy.IsWalking = true;
+            rb.velocity = direccionMovimiento * skeletonData.chara.MoveSpeed;
+            skeletonData.chara.IsWalking = true;
         }
-        else if (enemy.IsWaiting)
+        else if (skeletonData.chara.IsWaiting)
         {
             rb.velocity = Vector2.zero;
-            enemy.IsWalking = false;
+            skeletonData.chara.IsWalking = false;
         }
-        else if (enemy.IsTurning)
+        else if (skeletonData.chara.IsTurning)
         {
             CambiarDireccion();
         }
@@ -71,50 +71,50 @@ public class Enemy3Behaviour : MonoBehaviour
 
     void PerseguirJugador()
     {
-        enemy.IsAttacking = false;
-        enemy.IsWaiting = false;
+        skeletonData.chara.IsAttacking = false;
+        skeletonData.chara.IsWaiting = false;
         if (transform.position.x < jugador.transform.position.x)
         {
-            enemy.IsTurning = false;
+            skeletonData.chara.IsTurning = false;
             Vector2 direccion = (jugador.position - transform.position).normalized;
-            rb.velocity = direccion * enemy.RunSpeed;
-            enemy.IsWalking = true;
+            rb.velocity = direccion * skeletonData.chara.RunSpeed;
+            skeletonData.chara.IsWalking = true;
         }
         else
         {
-            enemy.IsTurning = true;
+            skeletonData.chara.IsTurning = true;
             Vector2 direccion = (jugador.position - transform.position).normalized;
-            rb.velocity = direccion * enemy.RunSpeed;
-            enemy.IsWalking = true;
+            rb.velocity = direccion * skeletonData.chara.RunSpeed;
+            skeletonData.chara.IsWalking = true;
         }
     }
 
     void AtacarJugador()
     {
         rb.velocity = Vector2.zero;
-        enemy.IsWalking = false;
-        enemy.IsAttacking = true;
+        skeletonData.chara.IsWalking = false;
+        skeletonData.chara.IsAttacking = true;
     }
     void CambiarDireccion()
     {
         // Cambiar la dirección de movimiento a una dirección aleatoria
         direccionMovimiento = new Vector2(Random.Range(-1f, 1f), Random.Range(-1f, 1f)).normalized;
-        rb.velocity = direccionMovimiento * enemy.MoveSpeed;
+        rb.velocity = direccionMovimiento * skeletonData.chara.MoveSpeed;
     }
     public void FinalAnimacion()
     {
-        enemy.IsAttacking = false;
+        skeletonData.chara.IsAttacking = false;
     }
 
     void Accion()
     {
         movimiento = Random.Range(1, 4);
 
-        enemy.IsWalking = movimiento == 1;
-        enemy.IsWaiting = movimiento == 2;
-        enemy.IsTurning = movimiento == 3;
+        skeletonData.chara.IsWalking = movimiento == 1;
+        skeletonData.chara.IsWaiting = movimiento == 2;
+        skeletonData.chara.IsTurning = movimiento == 3;
 
-        if (enemy.IsTurning)
+        if (skeletonData.chara.IsTurning)
         {
             StartCoroutine(TiempoGiro());
         }
@@ -125,12 +125,12 @@ public class Enemy3Behaviour : MonoBehaviour
     IEnumerator TiempoGiro()
     {
         yield return new WaitForSeconds(2);
-        enemy.IsTurning = false;
+        skeletonData.chara.IsTurning = false;
     }
     public void Morir()
     {
-        enemy.IsWalking = false;
-        enemy.IsAttacking = false;
+        skeletonData.chara.IsWalking = false;
+        skeletonData.chara.IsAttacking = false;
 
     }
 

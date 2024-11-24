@@ -203,8 +203,8 @@ MonoBehaviour:
   jugador: {fileID: 0}
   capaJugador:
     serializedVersion: 2
-    m_Bits: 0
-  enemy: {fileID: 11400000, guid: ed1b77c603e86334e82582e8c3c623e5, type: 2}
+    m_Bits: 8
+  seekerData: {fileID: 6264847179062914857}
   enemyData: {fileID: 11400000, guid: 6b293819004fc614f9bcc7b361afc523, type: 2}
   tiempoEspera: 1
 --- !u!114 &6264847179062914857
@@ -222,6 +222,9 @@ MonoBehaviour:
   chara: {fileID: 11400000, guid: ed1b77c603e86334e82582e8c3c623e5, type: 2}
   healthBar: {fileID: 1868041467784750167}
   enemyData: {fileID: 11400000, guid: 6b293819004fc614f9bcc7b361afc523, type: 2}
+  weaponList:
+  - {fileID: 11400000, guid: 4c0a5ec0ac2dd5247b19cad8b16a36a6, type: 2}
+  enemyID: 3
 --- !u!114 &4104251981119548746
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -247,7 +250,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8848c8ca9daa9134fae4aaab61f1cd93, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemy: {fileID: 11400000, guid: ed1b77c603e86334e82582e8c3c623e5, type: 2}
+  enemy: {fileID: 6264847179062914857}
   enemyData: {fileID: 11400000, guid: 6b293819004fc614f9bcc7b361afc523, type: 2}
   sprite: {fileID: 377137811629983565}
   anim: {fileID: 1142540642226661566}

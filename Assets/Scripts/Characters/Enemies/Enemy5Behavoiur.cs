@@ -17,16 +17,16 @@ public class Enemy5Behavoiur : MonoBehaviour
     [Header("Otros Parámetros")]
     public Transform jugador;
     public LayerMask capaJugador;
-    [SerializeField] private CharacterData enemy;
+    [SerializeField] private Enemy demonData;
     private int movimiento;
-    private Animator animator;
+    //private Animator animator;
     private Rigidbody2D rb;
     private Vector2 direccionMovimiento;
 
 
     void Start()
     {
-        animator = GetComponent<Animator>();
+        //animator = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
         Accion();
     }
@@ -47,17 +47,17 @@ public class Enemy5Behavoiur : MonoBehaviour
 
     void ManejarMovimientoNormal()
     {
-        enemy.IsAttacking = false;
+        demonData.chara.IsAttacking = false;
 
         if (camina)
         {
             rb.velocity = direccionMovimiento * velMovimiento;
-            enemy.IsWalking = true;
+            demonData.chara.IsWalking = true;
         }
         else if (espera)
         {
             rb.velocity = Vector2.zero;
-            enemy.IsWalking = false;
+            demonData.chara.IsWalking = false;
         }
         else if (gira)
         {
@@ -82,29 +82,29 @@ public class Enemy5Behavoiur : MonoBehaviour
 
     void PerseguirJugador()
     {
-        enemy.IsAttacking = false;
-        enemy.IsWaiting = false;
+        demonData.chara.IsAttacking = false;
+        demonData.chara.IsWaiting = false;
         if (transform.position.x < jugador.transform.position.x)
         {
-            enemy.IsTurning = true;
+            demonData.chara.IsTurning = true;
             Vector2 direccion = (jugador.position - transform.position).normalized;
-            rb.velocity = direccion * enemy.RunSpeed;
-            enemy.IsWalking = true;
+            rb.velocity = direccion * demonData.chara.RunSpeed;
+            demonData.chara.IsWalking = true;
         }
         else
         {
-            enemy.IsTurning = false;
+            demonData.chara.IsTurning = false;
             Vector2 direccion = (jugador.position - transform.position).normalized;
-            rb.velocity = direccion * enemy.RunSpeed;
-            enemy.IsWalking = true;
+            rb.velocity = direccion * demonData.chara.RunSpeed;
+            demonData.chara.IsWalking = true;
         }
     }
 
     void AtacarJugador()
     {
         rb.velocity = Vector2.zero;
-        enemy.IsWalking = false;
-        enemy.IsAttacking = true;
+        demonData.chara.IsWalking = false;
+        demonData.chara.IsAttacking = true;
     }
     void CambiarDireccion()
     {
@@ -114,7 +114,7 @@ public class Enemy5Behavoiur : MonoBehaviour
     }
     public void FinalAnimacion()
     {
-        enemy.IsAttacking = false;
+        demonData.chara.IsAttacking = false;
     }
 
     void Accion()
@@ -140,8 +140,8 @@ public class Enemy5Behavoiur : MonoBehaviour
     }
     public void Morir()
     {
-        enemy.IsWalking = false;
-        enemy.IsAttacking = false;
+        demonData.chara.IsWalking = false;
+        demonData.chara.IsAttacking = false;
     }
 
     private void OnDrawGizmos()

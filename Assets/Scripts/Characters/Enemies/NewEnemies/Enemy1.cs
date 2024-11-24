@@ -7,7 +7,7 @@ public class Enemy1 : MonoBehaviour
     public GameObject player;
     public GameObject hitboxAttack2;
     public GameObject hitbox;
-    [SerializeField] private CharacterData enemy;
+    [SerializeField] private Enemy newEnemy1;
     [SerializeField] private EnemyData enemyData;
     public Transform playerTransform;
     public LayerMask Player;
@@ -25,9 +25,9 @@ public class Enemy1 : MonoBehaviour
 
     void Start()
     {
-        enemy.IsWalking = false;
-        enemy.IsWaiting = false;
-        enemy.IsHurt = false;
+        newEnemy1.chara.IsWalking = false;
+        newEnemy1.chara.IsWaiting = false;
+        newEnemy1.chara.IsHurt = false;
         GameObject playerObject = GameObject.FindGameObjectWithTag("Player");
         if (playerObject != null)
         {
@@ -75,8 +75,8 @@ public class Enemy1 : MonoBehaviour
                 hitboxAttack2.SetActive(false);
                 isCooldownAttack = false;
                 isCooldownAttackTwo = false;
-                enemy.IsAttacking = false;
-                enemy.IsWalking = true;
+                newEnemy1.chara.IsAttacking = false;
+                newEnemy1.chara.IsWalking = true;
                 Follow();
                 break;
 
@@ -85,7 +85,7 @@ public class Enemy1 : MonoBehaviour
                 {
                     hitboxAttack2.SetActive(false);
                     isCooldownAttackTwo = false;
-                    enemy.IsWalking = false;
+                    newEnemy1.chara.IsWalking = false;
                     StartCoroutine(AttackOne());
                 }
                 break;
@@ -96,7 +96,7 @@ public class Enemy1 : MonoBehaviour
                     isCooldownAttack = false;
                     isCooldownAttackTwo = false;
                     hitboxAttack2.SetActive(false);
-                    enemy.IsAttacking = false;
+                    newEnemy1.chara.IsAttacking = false;
                     //enemy.IsWalking = false;
                     StartCoroutine(AttackTwo());
                 }
@@ -106,28 +106,28 @@ public class Enemy1 : MonoBehaviour
 
     void Follow()
     {
-        if (playerTransform != null & enemy.IsWalking)
+        if (playerTransform != null & newEnemy1.chara.IsWalking)
         {           
             Vector2 direction = (playerTransform.position - transform.position).normalized;
-            transform.position = Vector2.MoveTowards(transform.position, playerTransform.position, enemy.NormalSpeed * Time.deltaTime);
+            transform.position = Vector2.MoveTowards(transform.position, playerTransform.position, newEnemy1.chara.NormalSpeed * Time.deltaTime);
         }
     }
 
     IEnumerator AttackOne()
     {
-        if (enemy.IsAttacking) yield break;
+        if (newEnemy1.chara.IsAttacking) yield break;
 
         isCooldownAttack = true;
-        enemy.IsAttacking = true;
+        newEnemy1.chara.IsAttacking = true;
         yield return new WaitForSeconds(enemyData.IsCooldownMid);
 
         GameObject circle = Instantiate(circlePrefab, spawner.position, Quaternion.identity);
         Rigidbody2D rb = circle.GetComponent<Rigidbody2D>();
         Vector2 direction = transform.localScale.x > 0 ? Vector2.right : Vector2.left;
-        rb.velocity = direction * enemy.RunSpeed;
+        rb.velocity = direction * newEnemy1.chara.RunSpeed;
         Destroy(circle, 3f);
 
-        enemy.IsAttacking = false;
+        newEnemy1.chara.IsAttacking = false;
         yield return new WaitForSeconds(enemyData.IsCooldown);
         isCooldownAttack = false;
     }
@@ -135,7 +135,7 @@ public class Enemy1 : MonoBehaviour
     IEnumerator AttackTwo()
     {
         isCooldownAttackTwo = true;
-        enemy.IsAttackingTwo = true;
+        newEnemy1.chara.IsAttackingTwo = true;
 
         hitboxAttack2.SetActive(true);
         yield return new WaitForSeconds(enemyData.IsCooldownAnimTwo);
@@ -144,8 +144,8 @@ public class Enemy1 : MonoBehaviour
         Vector2 direction = (transform.position - playerTransform.position).normalized;
         transform.position += (Vector3)direction * retreatSpeed * Time.deltaTime;
 
-        enemy.IsAttackingTwo = false;
-        enemy.IsWalking = true;
+        newEnemy1.chara.IsAttackingTwo = false;
+        newEnemy1.chara.IsWalking = true;
         isCooldownAttackTwo = false;
     }
 
@@ -155,9 +155,9 @@ public class Enemy1 : MonoBehaviour
         {
             isTakingDamage = true; 
             StopAllCoroutines(); 
-            enemy.IsAttacking = false;
-            enemy.IsWalking = false;
-            enemy.IsHurt = true;
+            newEnemy1.chara.IsAttacking = false;
+            newEnemy1.chara.IsWalking = false;
+            newEnemy1.chara.IsHurt = true;
             StartCoroutine(RecoverFromDamage());
         }
     }
@@ -165,7 +165,7 @@ public class Enemy1 : MonoBehaviour
     IEnumerator RecoverFromDamage()
     {
         yield return new WaitForSeconds(0.5f);
-        enemy.IsHurt = false;
+        newEnemy1.chara.IsHurt = false;
         isTakingDamage= false; 
     }
 
