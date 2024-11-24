@@ -8,6 +8,7 @@ public class Enemy : Character{
     public override void CheckHealth(){
         if(chara.Health <= 0){
             chara.IsAlive = false;
+            GameObject.FindGameObjectWithTag("Portal").GetComponent<Portal>().EnemigoEliminado();
             Destroy(gameObject, enemyData.WaitTime);
         }
     }

@@ -44,7 +44,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 74e8a09023291634ab3055093aa7868e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyTypes: []
+  enemyTypes:
+  - {fileID: 2935826027151317227, guid: 5bd0586fbef2adf4a8420fe0d0736c0a, type: 3}
+  - {fileID: 2935826027151317227, guid: 5bd0586fbef2adf4a8420fe0d0736c0a, type: 3}
   initTime: 1
   repeatTime: 1
-  maxEnemies: 3
+  maxEnemies: 4
