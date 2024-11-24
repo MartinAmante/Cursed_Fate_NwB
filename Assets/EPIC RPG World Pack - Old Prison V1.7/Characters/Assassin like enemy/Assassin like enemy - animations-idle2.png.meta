@@ -43,7 +43,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -69,10 +69,10 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 2048
+    maxTextureSize: 4096
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 2
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -134,7 +134,154 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Assassin like enemy - animations-idle2_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2
+        width: 220
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de858adde766b6f44b3bbfe303677503
+      internalID: 1144368387
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Assassin like enemy - animations-idle2_1
+      rect:
+        serializedVersion: 2
+        x: 220
+        y: 2
+        width: 220
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7884477e3e24fd848b085c408296bdad
+      internalID: -10899896
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Assassin like enemy - animations-idle2_2
+      rect:
+        serializedVersion: 2
+        x: 440
+        y: 2
+        width: 220
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c73910fd53b47847830eda9bba8a991
+      internalID: 1995226936
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Assassin like enemy - animations-idle2_3
+      rect:
+        serializedVersion: 2
+        x: 660
+        y: 2
+        width: 220
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 369b22ddd0b32bf44bcb50af0be9c26f
+      internalID: 1591121806
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Assassin like enemy - animations-idle2_4
+      rect:
+        serializedVersion: 2
+        x: 880
+        y: 2
+        width: 220
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: faf396876cdd35e4eb262af7ef50dedf
+      internalID: -1073461587
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Assassin like enemy - animations-idle2_5
+      rect:
+        serializedVersion: 2
+        x: 1100
+        y: 2
+        width: 220
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f017639c931f664e83194cf2dee2128
+      internalID: 1351996221
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Assassin like enemy - animations-idle2_6
+      rect:
+        serializedVersion: 2
+        x: 1320
+        y: 2
+        width: 220
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a389691542e2d964ca3ed7c329133f16
+      internalID: -1003579304
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -145,7 +292,14 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Assassin like enemy - animations-idle2_0: 1144368387
+      Assassin like enemy - animations-idle2_1: -10899896
+      Assassin like enemy - animations-idle2_2: 1995226936
+      Assassin like enemy - animations-idle2_3: 1591121806
+      Assassin like enemy - animations-idle2_4: -1073461587
+      Assassin like enemy - animations-idle2_5: 1351996221
+      Assassin like enemy - animations-idle2_6: -1003579304
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

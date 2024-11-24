@@ -43,7 +43,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -69,10 +69,10 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 2048
+    maxTextureSize: 4096
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 2
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -134,7 +134,238 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Assassin like enemy - animations-atk2- jump atk after running_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2
+        width: 220
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d3145642b41981a488cd87ec6112f479
+      internalID: -1388969300
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Assassin like enemy - animations-atk2- jump atk after running_1
+      rect:
+        serializedVersion: 2
+        x: 220
+        y: 2
+        width: 220
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 89565ed32c75ece48bc607f93e8d2903
+      internalID: -1833066783
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Assassin like enemy - animations-atk2- jump atk after running_2
+      rect:
+        serializedVersion: 2
+        x: 440
+        y: 2
+        width: 220
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 585d122b3a9004847adb19af1880a9a4
+      internalID: 823438136
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Assassin like enemy - animations-atk2- jump atk after running_3
+      rect:
+        serializedVersion: 2
+        x: 660
+        y: 2
+        width: 220
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 33760e6d4df947347a89828b7b4c8bd1
+      internalID: 1377886327
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Assassin like enemy - animations-atk2- jump atk after running_4
+      rect:
+        serializedVersion: 2
+        x: 880
+        y: 2
+        width: 220
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 26e611aded8d2514d9287769e8ac238a
+      internalID: -408954437
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Assassin like enemy - animations-atk2- jump atk after running_5
+      rect:
+        serializedVersion: 2
+        x: 1100
+        y: 2
+        width: 220
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 13a899d5c2dc06e46809f03b4647c6a8
+      internalID: -980139973
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Assassin like enemy - animations-atk2- jump atk after running_6
+      rect:
+        serializedVersion: 2
+        x: 1320
+        y: 2
+        width: 220
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c5ff878b185e894d881885451baf503
+      internalID: -1950980097
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Assassin like enemy - animations-atk2- jump atk after running_7
+      rect:
+        serializedVersion: 2
+        x: 1540
+        y: 2
+        width: 220
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db26c08dac0d5b1498bdbf3aca2b17b9
+      internalID: -533286646
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Assassin like enemy - animations-atk2- jump atk after running_8
+      rect:
+        serializedVersion: 2
+        x: 1760
+        y: 2
+        width: 220
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3d0bde4d6fe0385459299f55fa96c9c9
+      internalID: 1892680023
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Assassin like enemy - animations-atk2- jump atk after running_9
+      rect:
+        serializedVersion: 2
+        x: 1980
+        y: 2
+        width: 220
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eab2bacba8b5f914eb7fc692caf4599c
+      internalID: 219287110
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Assassin like enemy - animations-atk2- jump atk after running_10
+      rect:
+        serializedVersion: 2
+        x: 2200
+        y: 2
+        width: 220
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a37c96a3625a6554d888a5e9ca075dde
+      internalID: -236123495
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -145,7 +376,18 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Assassin like enemy - animations-atk2- jump atk after running_0: -1388969300
+      Assassin like enemy - animations-atk2- jump atk after running_1: -1833066783
+      Assassin like enemy - animations-atk2- jump atk after running_10: -236123495
+      Assassin like enemy - animations-atk2- jump atk after running_2: 823438136
+      Assassin like enemy - animations-atk2- jump atk after running_3: 1377886327
+      Assassin like enemy - animations-atk2- jump atk after running_4: -408954437
+      Assassin like enemy - animations-atk2- jump atk after running_5: -980139973
+      Assassin like enemy - animations-atk2- jump atk after running_6: -1950980097
+      Assassin like enemy - animations-atk2- jump atk after running_7: -533286646
+      Assassin like enemy - animations-atk2- jump atk after running_8: 1892680023
+      Assassin like enemy - animations-atk2- jump atk after running_9: 219287110
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

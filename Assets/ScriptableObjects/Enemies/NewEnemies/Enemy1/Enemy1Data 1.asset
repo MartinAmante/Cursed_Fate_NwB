@@ -15,12 +15,13 @@ MonoBehaviour:
   weapon: 0
   weaponList: []
   detectionRange: 3.37
+  detectionSpawn: 0
   reactionTime: 0
   waitTime: 2
   detectionAttack: 1.26
   isCooldown: 2
   isCooldownAnimTwo: 2
-  isCooldownMid: 0.3
+  isCooldownMid: 1
   isAlert: 0
   isSpawning: 0
   isCooldownAttack: 0
