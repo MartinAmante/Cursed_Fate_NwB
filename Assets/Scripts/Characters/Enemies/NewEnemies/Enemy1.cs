@@ -109,7 +109,7 @@ public class Enemy1 : MonoBehaviour
         if (playerTransform != null & newEnemy1.chara.IsWalking)
         {           
             Vector2 direction = (playerTransform.position - transform.position).normalized;
-            transform.position = Vector2.MoveTowards(transform.position, playerTransform.position, newEnemy1.chara.RunSpeed * Time.deltaTime);
+            transform.position = Vector2.MoveTowards(transform.position, playerTransform.position, newEnemy1.chara.NormalSpeed * Time.deltaTime);
         }
     }
 
