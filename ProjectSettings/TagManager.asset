@@ -12,6 +12,7 @@ TagManager:
   - Portal
   - Audio
   - Wall
+  - PlayerSlider
   layers:
   - Default
   - TransparentFX

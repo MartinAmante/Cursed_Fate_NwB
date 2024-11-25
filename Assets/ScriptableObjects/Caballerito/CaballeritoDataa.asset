@@ -27,7 +27,7 @@ MonoBehaviour:
   dashCooldown: 0.6
   isAlive: 1
   isOnFire: 0
-  isWaiting: 1
+  isWaiting: 0
   isWalking: 0
   isTurning: 0
   isDashing: 0
