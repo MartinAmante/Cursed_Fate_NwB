@@ -31,9 +31,9 @@ MonoBehaviour:
   isOnFire: 0
   isWaiting: 1
   isWalking: 0
-  isTurning: 0
+  isTurning: 1
   isDashing: 0
-  isDashOnCooldown: 0
+  isDashOnCooldown: 1
   isAttacking: 0
   isAttackingTwo: 0
   isAttackingFire: 0
