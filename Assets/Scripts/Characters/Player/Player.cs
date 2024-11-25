@@ -26,6 +26,7 @@ public class Player : Character{
                 chara.IsAlive = false;
                 PlayerPrefs.SetString("LastLevel", SceneManager.GetActiveScene().name);
                 SceneManager.LoadScene("SceneMuerte");
+
             }
         }
     }
