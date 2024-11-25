@@ -18,7 +18,7 @@ GameObject:
   - component: {fileID: 7994988496005612195}
   - component: {fileID: 3252737105654025771}
   - component: {fileID: 252994666223481159}
-  m_Layer: 7
+  m_Layer: 6
   m_Name: SkeletonTerminado
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -83,7 +83,7 @@ BoxCollider2D:
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 640
+    m_Bits: 704
   m_LayerOverridePriority: 0
   m_ForceSendLayers:
     serializedVersion: 2
@@ -237,6 +237,7 @@ MonoBehaviour:
   capaJugador:
     serializedVersion: 2
     m_Bits: 8
+  DistanciaAtaque: 1.5
   skeletonData: {fileID: 3252737105654025771}
   enemyData: {fileID: 11400000, guid: 50c19ec891c68a2429322e0b54aa7166, type: 2}
 --- !u!114 &7994988496005612195
@@ -268,6 +269,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   chara: {fileID: 11400000, guid: f010ae3311b483e43975aea54f3d76e5, type: 2}
+  canvasVida: {fileID: 0}
   healthBar: {fileID: 5475738362428007418}
   enemyData: {fileID: 11400000, guid: 50c19ec891c68a2429322e0b54aa7166, type: 2}
   weaponList:
@@ -332,7 +334,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5198721744936924861, guid: e001519ab160a8640aa4cf95f8c897ab, type: 3}
       propertyPath: m_Layer
-      value: 7
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 5198721745379739926, guid: e001519ab160a8640aa4cf95f8c897ab, type: 3}
       propertyPath: m_Pivot.x
@@ -444,11 +446,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5198721745379739930, guid: e001519ab160a8640aa4cf95f8c897ab, type: 3}
       propertyPath: m_Layer
-      value: 7
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 5198721745578373965, guid: e001519ab160a8640aa4cf95f8c897ab, type: 3}
       propertyPath: m_Layer
-      value: 7
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 5198721745750725130, guid: e001519ab160a8640aa4cf95f8c897ab, type: 3}
       propertyPath: m_AnchorMax.x
@@ -464,11 +466,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5198721745750725133, guid: e001519ab160a8640aa4cf95f8c897ab, type: 3}
       propertyPath: m_Layer
-      value: 7
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 5198721746220597191, guid: e001519ab160a8640aa4cf95f8c897ab, type: 3}
       propertyPath: m_Layer
-      value: 7
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 5198721746642634422, guid: e001519ab160a8640aa4cf95f8c897ab, type: 3}
       propertyPath: m_SizeDelta.x
@@ -480,7 +482,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5198721746642634425, guid: e001519ab160a8640aa4cf95f8c897ab, type: 3}
       propertyPath: m_Layer
-      value: 7
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 5198721746756985426, guid: e001519ab160a8640aa4cf95f8c897ab, type: 3}
       propertyPath: m_AnchorMax.x
@@ -492,7 +494,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5198721746756985429, guid: e001519ab160a8640aa4cf95f8c897ab, type: 3}
       propertyPath: m_Layer
-      value: 7
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

@@ -12,8 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 420d779ed99bdfa4382cd3c33db94253, type: 3}
   m_Name: Demon
   m_EditorClassIdentifier: 
-  attackDamage: 35
+  attackDamage: 15
   attackSpeed: 0
   attackDuration: 0
   attackCooldown: 0
   isOnFire: 0
+  hitbox: {fileID: 0}
+  hitboxStart: 0
+  hitboxFinish: 0

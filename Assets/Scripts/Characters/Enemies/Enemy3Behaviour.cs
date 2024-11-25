@@ -8,6 +8,7 @@ public class Enemy3Behaviour : MonoBehaviour
     public Transform jugador;
     public LayerMask capaJugador;
     private int movimiento;
+    public float DistanciaAtaque;
     private Rigidbody2D rb;
     private Vector2 direccionMovimiento;
     [SerializeField] private Enemy skeletonData;
@@ -18,6 +19,12 @@ public class Enemy3Behaviour : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         Accion();
+
+        GameObject playerObject = GameObject.FindGameObjectWithTag("Player");
+        if (playerObject != null)
+        {
+            jugador = playerObject.transform;
+        }
     }
 
     void Update()
@@ -59,7 +66,7 @@ public class Enemy3Behaviour : MonoBehaviour
         float distanciaAlJugador = Vector2.Distance(transform.position, jugador.position);
 
 
-        if (distanciaAlJugador > 4f)
+        if (distanciaAlJugador > DistanciaAtaque)
         {
             PerseguirJugador();
         }
