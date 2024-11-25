@@ -8594,7 +8594,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7271267922148343649, guid: 06c8ba64f8a4a9042816f0ee1feb550c, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -11703,20 +11703,20 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3201522640866873226, guid: f7933188ff5b14e448baf180dfccae84, type: 3}
       propertyPath: enemyTypes.Array.size
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 3201522640866873226, guid: f7933188ff5b14e448baf180dfccae84, type: 3}
       propertyPath: enemyTypes.Array.data[0]
       value: 
-      objectReference: {fileID: 2935826027151317227, guid: 5bd0586fbef2adf4a8420fe0d0736c0a, type: 3}
+      objectReference: {fileID: 5549504312352842491, guid: 7e3d36ee0d0d568459fcb4f60058c797, type: 3}
     - target: {fileID: 3201522640866873226, guid: f7933188ff5b14e448baf180dfccae84, type: 3}
       propertyPath: enemyTypes.Array.data[1]
       value: 
-      objectReference: {fileID: 6811689314443773071, guid: 2b7fbb9c0f9372e40bf53c4abd322fc7, type: 3}
+      objectReference: {fileID: 1030941323760135840, guid: b0a7727066a46f641a8aacc44dfb6dea, type: 3}
     - target: {fileID: 3201522640866873226, guid: f7933188ff5b14e448baf180dfccae84, type: 3}
       propertyPath: enemyTypes.Array.data[2]
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 3118497460337552131, guid: 5587dbebcd7484a4dab93436e607f697, type: 3}
     - target: {fileID: 7359353416289264654, guid: f7933188ff5b14e448baf180dfccae84, type: 3}
       propertyPath: m_LocalPosition.x
       value: 59.05
@@ -15096,7 +15096,7 @@ GameObject:
   - component: {fileID: 8423344632436275291}
   m_Layer: 5
   m_Name: MarcoVida
-  m_TagString: Untagged
+  m_TagString: PlayerSlider
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -15567,7 +15567,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -0.000061035156, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &4610238890176773324
@@ -17094,11 +17094,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6135060043993930841, guid: 8ed1af788d4d42042b1851bdaccce72e, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 39.721832
+      value: 49.78
       objectReference: {fileID: 0}
     - target: {fileID: 6135060043993930841, guid: 8ed1af788d4d42042b1851bdaccce72e, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -3.9
+      value: -16.3
       objectReference: {fileID: 0}
     - target: {fileID: 6135060043993930841, guid: 8ed1af788d4d42042b1851bdaccce72e, type: 3}
       propertyPath: m_LocalPosition.z
