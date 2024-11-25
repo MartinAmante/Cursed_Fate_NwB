@@ -5,7 +5,7 @@ using UnityEngine;
 public class EnemyScript : MonoBehaviour
 {
     public GameObject player; // Referencia al jugador
-    public float speed = 3f;  // Velocidad de movimiento del enemigo
+    public float speed = 1.5f;  // Velocidad de movimiento del enemigo
 
     private Transform playerTransform;
 
@@ -34,7 +34,7 @@ public class EnemyScript : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             GameObject.FindGameObjectWithTag("Portal").GetComponent<Portal>().EnemigoEliminado();
-            Destroy(gameObject); // Destruye al enemigo
+            //Destroy(gameObject); // Destruye al enemigo
         }
     }
 }
