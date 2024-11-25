@@ -26,10 +26,7 @@ public class CaballeritoBehaviour : MonoBehaviour
     public virtual void Start()
     {
         attackProgress = 0f;
-        if (playerPosition == null)
-        {
-            playerPosition = GameObject.FindGameObjectWithTag("Player").transform;
-        }
+        playerPosition = GameObject.FindGameObjectWithTag("Player").transform;
     }
 
     // Update is called once per frame

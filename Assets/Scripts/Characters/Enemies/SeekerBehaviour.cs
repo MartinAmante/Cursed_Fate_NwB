@@ -10,6 +10,7 @@ public class SeekerBehaviour : MonoBehaviour
     [Header("Otros Parámetros")]
     public Transform jugador;
     public LayerMask capaJugador;
+    public float DistanciaAtaque;
     [SerializeField] private Enemy seekerData;
     [SerializeField] private EnemyData enemyData;
     //private int movimiento;
@@ -24,6 +25,12 @@ public class SeekerBehaviour : MonoBehaviour
         //animator = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
         //Accion();
+
+        GameObject playerObject = GameObject.FindGameObjectWithTag("Player");
+        if (playerObject != null)
+        {
+            jugador = playerObject.transform;
+        }
     }
 
     void Update()
@@ -73,7 +80,7 @@ public class SeekerBehaviour : MonoBehaviour
             float distanciaAlJugador = Vector2.Distance(transform.position, jugador.position);
 
 
-            if (distanciaAlJugador > 2f)
+            if (distanciaAlJugador > DistanciaAtaque)
             {
                 PerseguirJugador();
             }
@@ -87,7 +94,7 @@ public class SeekerBehaviour : MonoBehaviour
     {
         yield return new WaitForSeconds(enemyData.WaitTime);
         tiempoEspera = false;
-        enemyData.IsSpawning = false;
+        //enemyData.IsSpawning = false;
     }
     void PerseguirJugador()
     {

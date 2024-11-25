@@ -6,7 +6,7 @@ public class Enemy2 : MonoBehaviour
 {
     public GameObject player;
     public GameObject hitbox;
-    [SerializeField] private CharacterData enemy;
+    [SerializeField] private Enemy enemy;
     [SerializeField] private EnemyData enemyData;
     public Transform playerTransform;
     public LayerMask Player;
@@ -20,9 +20,9 @@ public class Enemy2 : MonoBehaviour
 
     void Start()
     {
-        enemy.IsWalking = false;
-        enemy.IsWaiting = false;
-        enemy.IsHurt = false;
+        enemy.chara.IsWalking = false;
+        enemy.chara.IsWaiting = false;
+        enemy.chara.IsHurt = false;
         GameObject playerObject = GameObject.FindGameObjectWithTag("Player");
         if (playerObject != null)
         {
@@ -64,15 +64,15 @@ public class Enemy2 : MonoBehaviour
 
                 
                 isCooldownAttack = false;
-                enemy.IsAttacking = false;
-                enemy.IsWalking = true;
+                enemy.chara.IsAttacking = false;
+                enemy.chara.IsWalking = true;
                 Follow();
                 break;
 
             case EnemyState.AttackOne:
                 if (!isCooldownAttack)
                 {
-                    enemy.IsWalking = false;
+                    enemy.chara.IsWalking = false;
                     StartCoroutine(AttackOne());
                 }
                 break;
@@ -81,24 +81,24 @@ public class Enemy2 : MonoBehaviour
 
     void Follow()
     {
-        if (playerTransform != null & enemy.IsWalking)
+        if (playerTransform != null & enemy.chara.IsWalking)
         {
             Vector2 direction = (playerTransform.position - transform.position).normalized;
-            transform.position = Vector2.MoveTowards(transform.position, playerTransform.position, enemy.NormalSpeed * Time.deltaTime);
+            transform.position = Vector2.MoveTowards(transform.position, playerTransform.position, enemy.chara.RunSpeed * Time.deltaTime);
         }
     }
 
     IEnumerator AttackOne()
     {
-        if (enemy.IsAttacking) yield break;
+        if (enemy.chara.IsAttacking) yield break;
 
         isCooldownAttack = true;
-        enemy.IsAttacking = true;     
+        enemy.chara.IsAttacking = true;     
         yield return new WaitForSeconds(enemyData.IsCooldownMid);
         hitbox.SetActive(true);
         yield return new WaitForSeconds(enemyData.IsCooldown);
         hitbox.SetActive(false);
-        enemy.IsAttacking = false;       
+        enemy.chara.IsAttacking = false;       
         yield return new WaitForSeconds(enemyData.IsCooldown);
         isCooldownAttack = false;
     }
@@ -109,9 +109,9 @@ public class Enemy2 : MonoBehaviour
         {
             isTakingDamage = true;
             StopAllCoroutines();
-            enemy.IsAttacking = false;
-            enemy.IsWalking = false;
-            enemy.IsHurt = true;
+            enemy.chara.IsAttacking = false;
+            enemy.chara.IsWalking = false;
+            enemy.chara.IsHurt = true;
             StartCoroutine(RecoverFromDamage());
         }
     }
@@ -119,7 +119,7 @@ public class Enemy2 : MonoBehaviour
     IEnumerator RecoverFromDamage()
     {
         yield return new WaitForSeconds(0.5f);
-        enemy.IsHurt = false;
+        enemy.chara.IsHurt = false;
         isTakingDamage = false;
     }
 

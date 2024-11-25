@@ -8,6 +8,7 @@ public class Enemy2Behaviour : MonoBehaviour
     [Header("Otros Parámetros")]
     public Transform jugador;
     public LayerMask capaJugador;
+    public float DistanciaAtaque;
     [SerializeField] private Enemy sproutData;
     [SerializeField] private EnemyData enemyData;
     private int movimiento;
@@ -67,7 +68,7 @@ public class Enemy2Behaviour : MonoBehaviour
         float distanciaAlJugador = Vector2.Distance(transform.position, jugador.position);
 
 
-        if (distanciaAlJugador > 2f)
+        if (distanciaAlJugador > DistanciaAtaque)
         {
             PerseguirJugador();
         }
