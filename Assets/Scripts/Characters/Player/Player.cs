@@ -24,8 +24,7 @@ public class Player : Character{
             }else{
                 GetComponent<Collider2D>().enabled = false;
                 chara.IsAlive = false;
-                PlayerPrefs.SetString("LastLevel", SceneManager.GetActiveScene().name);
-                SceneManager.LoadScene("SceneMuerte");
+                Debug.Log("GAME OVER");
             }
         }
     }
