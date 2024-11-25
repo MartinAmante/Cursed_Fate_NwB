@@ -265,6 +265,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   chara: {fileID: 11400000, guid: 2e5beabf1e498684d8a13f4beff30bb9, type: 2}
+  canvasVida: {fileID: 0}
   healthBar: {fileID: 977064830573368529}
   enemyData: {fileID: 11400000, guid: d6e97384a1789b24bbb00995a233abaf, type: 2}
   weaponList:
