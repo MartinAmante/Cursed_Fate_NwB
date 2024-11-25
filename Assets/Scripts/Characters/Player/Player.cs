@@ -6,12 +6,18 @@ using UnityEngine.TextCore.Text;
 
 public class Player : Character{
     private Vector3 playerSpawner;
+    public static GameObject instance;
 
     private void Start(){
         playerSpawner = GameObject.FindGameObjectWithTag("PlayerSpawner").transform.position;
         transform.position = playerSpawner;
         GetComponent<Collider2D>().enabled = true;
         chara.IsAlive = true;
+        DontDestroyOnLoad(this.gameObject);
+        if (instance == null)
+        { //Se asegura que solo haya un objeto de este tipo
+            instance = this.gameObject;
+        }
     }
 
     public override void CheckHealth(){
