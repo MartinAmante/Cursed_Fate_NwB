@@ -25,7 +25,7 @@ public class EnemyAnimation : MonoBehaviour{
     public void Movement()
     {
         anim.SetBool("isAlive", enemy.chara.IsAlive);
-        anim.SetBool("isSpawning", enemyData.IsSpawning);
+        anim.SetBool("isSpawning", enemy.chara.IsSpawning);
         anim.SetBool("isWaiting", enemy.chara.IsWaiting);
         anim.SetBool("isWalking", enemy.chara.IsWalking);
         anim.SetBool("isDashing", enemy.chara.IsDashing);

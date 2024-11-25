@@ -237,8 +237,7 @@ MonoBehaviour:
   capaJugador:
     serializedVersion: 2
     m_Bits: 8
-  DistanciaAtaque: 0.5
-  sproutData: {fileID: 8393646628432011709}
+  sproutData: {fileID: 0}
   enemyData: {fileID: 11400000, guid: d6e97384a1789b24bbb00995a233abaf, type: 2}
 --- !u!114 &5747343854216020867
 MonoBehaviour:

@@ -17,7 +17,6 @@ public class Enemy5Behavoiur : MonoBehaviour
     [Header("Otros Parámetros")]
     public Transform jugador;
     public LayerMask capaJugador;
-    public float DistanciaAtaque;
     [SerializeField] private Enemy demonData;
     private int movimiento;
     //private Animator animator;
@@ -30,11 +29,6 @@ public class Enemy5Behavoiur : MonoBehaviour
         //animator = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
         Accion();
-        GameObject playerObject = GameObject.FindGameObjectWithTag("Player");
-        if (playerObject != null)
-        {
-            jugador = playerObject.transform;
-        }
     }
 
     void Update()
@@ -76,7 +70,7 @@ public class Enemy5Behavoiur : MonoBehaviour
         float distanciaAlJugador = Vector2.Distance(transform.position, jugador.position);
         
 
-        if (distanciaAlJugador > DistanciaAtaque)
+        if (distanciaAlJugador > 8f)
         {
             PerseguirJugador();
         }
