@@ -1,73 +1,64 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement; // Importa SceneManagement para gestionar escenas
+using UnityEngine.SceneManagement;
 
 public class AudioManager : MonoBehaviour
 {
     [Header("---------Audio Source---------")]
-    [SerializeField] AudioSource musicSource;
-    [SerializeField] AudioSource SFXSource;
+    [SerializeField] private AudioSource musicSource;
+    [SerializeField] private AudioSource SFXSource;
 
     [Header("---------Audio Clip---------")]
     public AudioClip MainMenu;
-    public AudioClip MenuSelect;
+    public AudioClip MusicLevel;
     public AudioClip MenuUpDown;
     public AudioClip Door;
     public AudioClip Portal;
+    public AudioClip Hit;
 
     private static AudioManager instance;
 
+    private Dictionary<string, AudioClip> sceneMusicDict = new Dictionary<string, AudioClip>();
+
     private void Awake()
     {
-        // Aseguramos que solo exista un AudioManager
         if (instance == null)
         {
             instance = this;
-            DontDestroyOnLoad(gameObject); // Evita que se destruya entre escenas
+            DontDestroyOnLoad(gameObject);
         }
         else
         {
             Destroy(gameObject);
             return;
         }
-    }
+        sceneMusicDict.Add("Menu", MainMenu);
+        sceneMusicDict.Add("Mapa Uno", MusicLevel);
 
-    private void Start()
-    {
-        musicSource.clip = MainMenu;
-        musicSource.Play();
-
-        // Suscribimos un método para cuando cambie la escena
         SceneManager.sceneLoaded += OnSceneLoaded;
     }
 
     private void OnDestroy()
     {
-        // Desuscribimos para evitar errores si el objeto se destruye
         SceneManager.sceneLoaded -= OnSceneLoaded;
     }
 
-    private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
-        if (scene.name == "Opciones")
+        if (sceneMusicDict.ContainsKey(scene.name))
         {
-            // Aquí puedes ajustar el audio al entrar a Opciones
-            // Ejemplo: musicSource.volume = 0.5f; o musicSource.Pause();
-        }
-        else if (scene.name == "Menu")
-        {
-            // Si vuelves al menú, puedes restaurar el audio como prefieras
-            if (!musicSource.isPlaying)
+            AudioClip clipToPlay = sceneMusicDict[scene.name];
+
+            if (musicSource.clip != clipToPlay || !musicSource.isPlaying)
             {
-                musicSource.clip = MainMenu;
+                musicSource.clip = clipToPlay;
                 musicSource.Play();
             }
         }
-        else if (scene.name == "Mapa Uno") // Cambia "Nivel" por el nombre de tu escena de juego
+        else
         {
-            // Detenemos la música al entrar al nivel
-            musicSource.Stop();
+            Debug.LogWarning("No music assigned for scene: " + scene.name);
         }
     }
 
@@ -76,3 +67,5 @@ public class AudioManager : MonoBehaviour
         SFXSource.PlayOneShot(clip);
     }
 }
+
+
