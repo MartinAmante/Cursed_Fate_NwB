@@ -11544,8 +11544,12 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 3201522640866873226, guid: f7933188ff5b14e448baf180dfccae84, type: 3}
+      propertyPath: waitTime
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3201522640866873226, guid: f7933188ff5b14e448baf180dfccae84, type: 3}
       propertyPath: maxEnemies
-      value: 4
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 3201522640866873226, guid: f7933188ff5b14e448baf180dfccae84, type: 3}
       propertyPath: enemyTypes.Array.size

@@ -8,13 +8,10 @@ public class GeneradorEnemigos : MonoBehaviour
     private GameObject[] enemyTypes;
 
     [SerializeField]
-    private float initTime;
+    private float waitTime;
 
     [SerializeField]
-    private float repeatTime;
-
-    [SerializeField]
-    private int maxEnemies = 10; // Número máximo de enemigos a generar
+    private int maxEnemies; // Número máximo de enemigos a generar
 
     private int spawnCount = 0; // Contador de enemigos generados
     private IEnumerator couroutine;
@@ -23,9 +20,8 @@ public class GeneradorEnemigos : MonoBehaviour
     void Start()
     {
         portal = GameObject.FindGameObjectWithTag("Portal").GetComponent<Portal>();
-        couroutine = Enemies(4.0f);
+        couroutine = Enemies(waitTime);
         StartCoroutine(couroutine);
-        // InvokeRepeating("GenerateEnemy", initTime, repeatTime);
     }
 
     private IEnumerator Enemies(float waitTime)

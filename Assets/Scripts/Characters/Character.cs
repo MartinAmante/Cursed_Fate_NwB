@@ -9,6 +9,7 @@ public abstract class Character : MonoBehaviour{
     [SerializeField] public CharacterData chara;
     [SerializeField] public GameObject canvasVida;
     public Slider healthBar;
+    
 
     private void Awake()
     {
@@ -18,6 +19,9 @@ public abstract class Character : MonoBehaviour{
 
         {
             chara = ScriptableObject.CreateInstance<CharacterData>();
+            chara.Health = chara.MaxHealth;
+            chara.Lifes = chara.MaxLifes;
+            healthBar.maxValue = chara.MaxHealth;
         }
         else
 
