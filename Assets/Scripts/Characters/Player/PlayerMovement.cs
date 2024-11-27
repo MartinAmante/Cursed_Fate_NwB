@@ -6,10 +6,17 @@ public class PlayerMovement : MonoBehaviour{
     [SerializeField]private CharacterData player;
     [SerializeField]private Rigidbody2D rb2d;
     [SerializeField]private Vector2 moveInput;
+    [SerializeField] public GameObject playerFinal;
 
+    private void Awake()
+    {
+        playerFinal = GameObject.FindGameObjectWithTag("Player");
+    }
     void Start(){
+        rb2d = playerFinal.GetComponent<Rigidbody2D>();
         PlayerInput.direction += Move;
     }
+    void Update() { playerFinal = GameObject.FindGameObjectWithTag("Player"); rb2d = playerFinal.GetComponent<Rigidbody2D>(); }
 
     void Move(float xAxis, float yAxis){
         moveInput.x = xAxis;

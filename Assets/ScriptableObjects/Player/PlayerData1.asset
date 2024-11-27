@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 16ca0ab21afcc1b4b80562f7a374ec16, type: 3}
   m_Name: PlayerData1
   m_EditorClassIdentifier: 
-  health: 100
+  health: 60
   maxHealth: 100
   lifes: 3
   maxLifes: 3
@@ -31,7 +31,7 @@ MonoBehaviour:
   isOnFire: 0
   isWaiting: 1
   isWalking: 0
-  isTurning: 0
+  isTurning: 1
   isDashing: 0
   isDashOnCooldown: 0
   isAttacking: 0

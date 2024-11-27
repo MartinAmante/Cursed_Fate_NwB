@@ -21,7 +21,6 @@ public abstract class Character : MonoBehaviour{
             chara = ScriptableObject.CreateInstance<CharacterData>();
             chara.Health = chara.MaxHealth;
             chara.Lifes = chara.MaxLifes;
-            healthBar.maxValue = chara.MaxHealth;
         }
         else
 
@@ -31,22 +30,7 @@ public abstract class Character : MonoBehaviour{
     }
 
     void Update(){
-        if (gameObject.tag == "Player")
-
-        {
-            canvasVida = GameObject.FindGameObjectWithTag("PlayerSlider");
-            healthBar = canvasVida.GetComponentInChildren<Slider>();
-        }
-        healthBar.maxValue = chara.MaxHealth;
-        healthBar.value = chara.Health;
-        chara.IsWaiting = !(!chara.IsAlive || chara.IsWalking || chara.IsAttacking || chara.IsAttackingFire || chara.IsDashing || chara.IsProtecting);
-        if(!chara.IsAttacking && !chara.IsAttackingFire ){
-            if(chara.IsTurning){
-                transform.localRotation = Quaternion.Euler(0, 180, 0);
-            }else{
-                transform.localRotation = Quaternion.Euler(0, 0, 0);
-            }
-        }
+        
     }
 
     public abstract void CheckHealth();

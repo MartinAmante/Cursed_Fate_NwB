@@ -7,11 +7,16 @@ using UnityEngine.TextCore.Text;
 
 public class Player : Character{
     [SerializeField] private GameObject playerSpawner;
+    [SerializeField] private string id;
     public static GameObject instance;
 
+
+    private void Awake()
+    {
+        
+    }
     private void Start(){
         playerSpawner = GameObject.FindGameObjectWithTag("PlayerSpawner");
-        healthBar.maxValue = chara.MaxHealth;
         transform.position = playerSpawner.transform.position;
         GetComponent<Collider2D>().enabled = true;
         chara.IsAlive = true;
@@ -20,11 +25,17 @@ public class Player : Character{
         { //Se asegura que solo haya un objeto de este tipo
             instance = this.gameObject;
         }
+        id = gameObject.GetInstanceID().ToString();
+        if (id != "403348")
+        {
+            Destroy(gameObject);
+        }
     }
     private void Update()
     {
         canvasVida = GameObject.FindGameObjectWithTag("PlayerSlider");
         healthBar = canvasVida.GetComponentInChildren<Slider>();
+        healthBar.maxValue = chara.MaxHealth;
         healthBar.value = chara.Health;
         chara.IsWaiting = !(!chara.IsAlive || chara.IsWalking || chara.IsAttacking || chara.IsAttackingFire || chara.IsDashing || chara.IsProtecting);
         if (!chara.IsAttacking && !chara.IsAttackingFire)
