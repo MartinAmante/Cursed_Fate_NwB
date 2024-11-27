@@ -67,7 +67,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!61 &4531257840405810139
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -275,6 +275,7 @@ MonoBehaviour:
   weaponList:
   - {fileID: 11400000, guid: caf00004d8e6cce4bb13746f452e6e37, type: 2}
   enemyID: 2
+  currentHealth: 0
 --- !u!114 &252994666223481159
 MonoBehaviour:
   m_ObjectHideFlags: 0

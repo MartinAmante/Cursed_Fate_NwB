@@ -7,13 +7,16 @@ using UnityEngine.TextCore.Text;
 
 public class Player : Character{
     [SerializeField] private GameObject playerSpawner;
-    [SerializeField] private string id;
+    [SerializeField] private float id;
     public static GameObject instance;
 
 
     private void Awake()
     {
-        
+        if (id == 1f)
+        {
+            Destroy(gameObject);
+        }
     }
     private void Start(){
         playerSpawner = GameObject.FindGameObjectWithTag("PlayerSpawner");
@@ -25,14 +28,12 @@ public class Player : Character{
         { //Se asegura que solo haya un objeto de este tipo
             instance = this.gameObject;
         }
-        id = gameObject.GetInstanceID().ToString();
-        if (id != "403348")
-        {
-            Destroy(gameObject);
-        }
+        id = 1f;
+        
     }
     private void Update()
     {
+        id = 2f;
         canvasVida = GameObject.FindGameObjectWithTag("PlayerSlider");
         healthBar = canvasVida.GetComponentInChildren<Slider>();
         healthBar.maxValue = chara.MaxHealth;

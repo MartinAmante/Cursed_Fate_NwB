@@ -11572,7 +11572,7 @@ PrefabInstance:
     - target: {fileID: 3201522640866873226, guid: f7933188ff5b14e448baf180dfccae84, type: 3}
       propertyPath: enemyTypes.Array.data[0]
       value: 
-      objectReference: {fileID: 5549504312352842491, guid: 7e3d36ee0d0d568459fcb4f60058c797, type: 3}
+      objectReference: {fileID: 4072772681555660770, guid: 649807ae19b5d794e85852b428c7dfeb, type: 3}
     - target: {fileID: 3201522640866873226, guid: f7933188ff5b14e448baf180dfccae84, type: 3}
       propertyPath: enemyTypes.Array.data[1]
       value: 

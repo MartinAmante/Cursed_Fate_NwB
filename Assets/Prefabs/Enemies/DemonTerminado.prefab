@@ -254,7 +254,7 @@ MonoBehaviour:
   capaJugador:
     serializedVersion: 2
     m_Bits: 8
-  DistanciaAtaque: 2
+  DistanciaAtaque: 7
   demonData: {fileID: 5071898718097403976}
 --- !u!114 &5654695644270049488
 MonoBehaviour:
@@ -288,6 +288,7 @@ MonoBehaviour:
   weaponList:
   - {fileID: 11400000, guid: 8e97f512daba90c41902861b6e9c49b4, type: 2}
   enemyID: 6
+  currentHealth: 0
 --- !u!114 &1626438555576996741
 MonoBehaviour:
   m_ObjectHideFlags: 0

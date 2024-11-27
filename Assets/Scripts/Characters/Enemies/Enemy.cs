@@ -36,7 +36,7 @@ public class Enemy : Character{
                 chara.Lifes = chara.MaxLifes;
                 chara.MaxLifes = 1;
                 chara.WeaponList = weaponList;
-                chara.RunSpeed = 4;
+                chara.RunSpeed = 10;
                 chara.IsAttacking = false;
                 break;
             /*          Skeleton                 */
