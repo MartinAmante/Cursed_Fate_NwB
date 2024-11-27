@@ -4,23 +4,38 @@ using UnityEngine;
 
 public class PlayerSpawner : MonoBehaviour
 {
-    [SerializeField] public GameObject player;
+    [SerializeField] private GameObject player;
+    [SerializeField] private float playerCount;
     //[SerializeField] public GameObject playerFinal;
     // Start is called before the first frame update
     private void Awake()
     {
-        //Instantiate(playerFinal);
+        playerCount = GameObject.FindGameObjectsWithTag("Player").Length;
+            if ( playerCount >= 1) 
+        {
+            Debug.Log("Hay" + playerCount + " Players");
+            player.SetActive(false);
+        }
+            if (playerCount == 0)
+        {
+            player.SetActive(true);
+        }
+        
     }
     void Start()
     {
-        
-        player = GameObject.FindGameObjectWithTag("Player");
+        Instantiate(player);
+        if (player == null)
+        {
+            player = GameObject.FindGameObjectWithTag("Player");
+        }
+        //player = GameObject.FindGameObjectWithTag("Player");
         player.transform.position = transform.position;
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        playerCount = GameObject.FindGameObjectsWithTag("Player").Length;
     }
 }

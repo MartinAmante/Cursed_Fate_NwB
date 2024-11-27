@@ -330,7 +330,7 @@ Transform:
   m_GameObject: {fileID: 7678871892075913465}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: -1, z: 0, w: 0}
-  m_LocalPosition: {x: 49.78, y: -16.3, z: 0}
+  m_LocalPosition: {x: 47.72, y: -4.88, z: -0.01199446}
   m_LocalScale: {x: 0.8, y: 0.8, z: 0.8}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -394,7 +394,7 @@ MonoBehaviour:
   player: {fileID: 11400000, guid: 15b8dfbd1dd209f40a37a838b8b3516d, type: 2}
   rb2d: {fileID: 6181569870180369955}
   moveInput: {x: 0, y: 0}
-  playerFinal: {fileID: 0}
+  playerFinal: {fileID: 7678871892075913465}
 --- !u!114 &8508904589528896668
 MonoBehaviour:
   m_ObjectHideFlags: 0
