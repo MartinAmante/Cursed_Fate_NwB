@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 6201834384584567333}
   - component: {fileID: 5293773116975224573}
   - component: {fileID: 8224683337498106824}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Enemy1Final
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -161,7 +161,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0.060216904, y: -0.1751771}
@@ -190,6 +190,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   chara: {fileID: 11400000, guid: 2163341103106124aa2364bc94cf5307, type: 2}
+  canvasVida: {fileID: 0}
   healthBar: {fileID: 8880369240694063578}
   enemyData: {fileID: 11400000, guid: 590711cc38efdab459ec01985bfd57b9, type: 2}
   weaponList:
@@ -207,7 +208,7 @@ GameObject:
   - component: {fileID: 8155008946700371160}
   - component: {fileID: 365133975128522910}
   - component: {fileID: 6954455815787555835}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -315,7 +316,7 @@ GameObject:
   - component: {fileID: 5985969560471717011}
   - component: {fileID: 7067742289103572593}
   - component: {fileID: 1884910440311275653}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: HitboxAttack2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -425,7 +426,7 @@ CircleCollider2D:
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 64
   m_LayerOverridePriority: 0
   m_ForceSendLayers:
     serializedVersion: 2
@@ -467,7 +468,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8016875335158837956}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: spawnerBall
   m_TagString: Untagged
   m_Icon: {fileID: -5487077368411116049, guid: 0000000000000000d000000000000000, type: 0}

@@ -88,7 +88,7 @@ public class Enemy : Character{
                 chara.Lifes = chara.MaxLifes;
                 chara.MaxLifes = 1;
                 chara.WeaponList = weaponList;
-                chara.RunSpeed = 3;
+                chara.RunSpeed = 2;
                 chara.IsAttacking = false;
                 break;
             /*         New Enemy 2             */

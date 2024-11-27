@@ -21,6 +21,7 @@ public class Enemy1 : MonoBehaviour
     public float retreatSpeed = 10f;
     private enum EnemyState { Follow, AttackOne, AttackTwo }
     private EnemyState currentState = EnemyState.Follow;
+    private Coroutine attackOneCoroutine;
 
 
     void Start()
@@ -91,14 +92,14 @@ public class Enemy1 : MonoBehaviour
                 break;
 
             case EnemyState.AttackTwo:
-                if (!isCooldownAttackTwo)
+                if (!isCooldownAttackTwo && attackOneCoroutine == null)
                 {
                     isCooldownAttack = false;
                     isCooldownAttackTwo = false;
                     hitboxAttack2.SetActive(false);
                     newEnemy1.chara.IsAttacking = false;
                     //enemy.IsWalking = false;
-                    StartCoroutine(AttackTwo());
+                    attackOneCoroutine = StartCoroutine(AttackOne());
                 }
                 break;
         }
@@ -109,7 +110,7 @@ public class Enemy1 : MonoBehaviour
         if (playerTransform != null & newEnemy1.chara.IsWalking)
         {           
             Vector2 direction = (playerTransform.position - transform.position).normalized;
-            transform.position = Vector2.MoveTowards(transform.position, playerTransform.position, newEnemy1.chara.NormalSpeed * Time.deltaTime);
+            transform.position = Vector2.MoveTowards(transform.position, playerTransform.position, newEnemy1.chara.RunSpeed * Time.deltaTime);
         }
     }
 
@@ -125,11 +126,12 @@ public class Enemy1 : MonoBehaviour
         Rigidbody2D rb = circle.GetComponent<Rigidbody2D>();
         Vector2 direction = transform.localScale.x > 0 ? Vector2.right : Vector2.left;
         rb.velocity = direction * newEnemy1.chara.RunSpeed;
-        Destroy(circle, 3f);
+        Destroy(circle, 2f);
 
         newEnemy1.chara.IsAttacking = false;
         yield return new WaitForSeconds(enemyData.IsCooldown);
         isCooldownAttack = false;
+        attackOneCoroutine = null;
     }
 
     IEnumerator AttackTwo()
