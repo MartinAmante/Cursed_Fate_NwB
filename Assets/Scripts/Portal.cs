@@ -10,12 +10,15 @@ public class Portal : MonoBehaviour
 
     [SerializeField] private int enemigosEliminados;
 
+    [SerializeField] private GameObject player;
+
     private Animator animator;
     private bool portalActivo = false;
     private Collider2D portalCollider;
     void Start()
     {
-        animator= GetComponent<Animator>();
+        player = GameObject.FindGameObjectWithTag("Player");
+        animator = GetComponent<Animator>();
         cantidadEnemigos = GameObject.FindGameObjectsWithTag("Enemy").Length;
         portalCollider = GetComponent<Collider2D>();
         portalCollider.enabled = false;
@@ -25,6 +28,7 @@ public class Portal : MonoBehaviour
     {
         if (SceneManager.GetActiveScene().name == "Mapa Tres")
         {
+            player.SetActive(false);
             SceneManager.LoadScene("Menu");
         }
         else

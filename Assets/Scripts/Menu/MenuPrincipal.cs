@@ -7,14 +7,21 @@ public class MenuPrincipal : MonoBehaviour
 {
     public Transform camara;
     public Transform player;
+    public Player playerFinal;
     public float duracion = 2f;
     public Animator puertaAnim;
-    [SerializeField] public CharacterData PlayerData;
+    [SerializeField] public CharacterData playerData;
     AudioManager audioManager;
 
     private void Awake()
     {
         audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
+    }
+
+    private void Start()
+    {
+        playerFinal = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
+        //playerData = playerFinal.GetComponent<CharacterData>();
     }
 
     public void IniciarAnimacion()
@@ -47,8 +54,8 @@ public class MenuPrincipal : MonoBehaviour
     public void CambioNivel()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
-        PlayerData.Lifes = 3;
-        PlayerData.Health = PlayerData.MaxHealth;
+        playerFinal.chara.Lifes = 3;
+        playerFinal.chara.Health = playerFinal.chara.MaxHealth;
     }
 
     public void OptionMenu(string NombreMenu)
