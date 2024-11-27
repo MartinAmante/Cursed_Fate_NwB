@@ -46,6 +46,7 @@ public class Enemy2Behaviour : MonoBehaviour
         {
             ManejarPersecucionJugador();
         }
+        Flip();
     }
 
     void ManejarMovimientoNormal()
@@ -96,18 +97,18 @@ public class Enemy2Behaviour : MonoBehaviour
             rb.velocity = direccion * sproutData.chara.RunSpeed;
             sproutData.chara.IsWalking = true;
         }
-        Flip();
+        
     }
     void Flip()
     {
 
         if (jugador.position.x < transform.position.x)
         {
-            transform.localScale = new Vector3(transform.localScale.x * -1, transform.localScale.y, transform.localScale.z);
+            transform.localScale = new Vector3( -1f, 1f, 0);
         }
         else
         {
-            transform.localScale = new Vector3(transform.localScale.x, transform.localScale.y, transform.localScale.z);
+            transform.localScale = new Vector3(1f, 1f, 0);
         }
     }
     void AtacarJugador()

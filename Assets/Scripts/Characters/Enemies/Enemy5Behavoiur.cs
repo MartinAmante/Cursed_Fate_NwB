@@ -112,11 +112,11 @@ public class Enemy5Behavoiur : MonoBehaviour
 
         if (jugador.position.x < transform.position.x)
         {
-            transform.localScale = new Vector3(transform.localScale.x * -1, transform.localScale.y, transform.localScale.z);
+            transform.localScale = new Vector3(-8f, 8f, 0f);
         }
         else
         {
-            transform.localScale = new Vector3(transform.localScale.x, transform.localScale.y, transform.localScale.z);
+            transform.localScale = new Vector3(8f, 8f, 0f);
         }
     }
     void AtacarJugador()

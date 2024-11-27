@@ -76,6 +76,7 @@ public class EnemyBehaviour4 : MonoBehaviour
         {
             AtacarJugador();
         }
+        Flip();
     }
 
     void PerseguirJugador()
@@ -96,18 +97,18 @@ public class EnemyBehaviour4 : MonoBehaviour
             rb.velocity = direccion * OGdata.chara.RunSpeed;
             OGdata.chara.IsWalking = true;
         }
-        Flip();
+       
     }
     void Flip()
     {
 
         if (jugador.position.x < transform.position.x)
         {
-            transform.localScale = new Vector3(transform.localScale.x * -1, transform.localScale.y, transform.localScale.z);
+            transform.localScale = new Vector3(-3f, 3f, 0f);
         }
         else
         {
-            transform.localScale = new Vector3(transform.localScale.x, transform.localScale.y, transform.localScale.z);
+            transform.localScale = new Vector3(3f, 3f, 0f);
         }
     }
     void AtacarJugador()

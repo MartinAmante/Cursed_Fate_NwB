@@ -40,6 +40,7 @@ public class EnemyBehaviour : MonoBehaviour
         {
             ManejarPersecucionJugador();
         }
+        Flip();
     }
 
     void ManejarMovimientoNormal()
@@ -96,18 +97,18 @@ public class EnemyBehaviour : MonoBehaviour
             rb.velocity = direccion * golemData.chara.RunSpeed;
             golemData.chara.IsWalking = true;
         }
-        Flip();
+        
     }
     void Flip()
     {
 
         if (jugador.position.x < transform.position.x)
         {
-            transform.localScale = new Vector3(transform.localScale.x * -1, transform.localScale.y, transform.localScale.z);
+            transform.localScale = new Vector3(-2f, 2f, 0f);
         }
         else
         {
-            transform.localScale = new Vector3(transform.localScale.x, transform.localScale.y, transform.localScale.z);
+            transform.localScale = new Vector3(2f, 2f, 0f); 
         }
     }
     void AtacarJugador()
