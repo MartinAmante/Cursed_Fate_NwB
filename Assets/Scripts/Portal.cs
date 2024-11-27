@@ -23,6 +23,11 @@ public class Portal : MonoBehaviour
 
     private void ActivarPortal()
     {
+        if (SceneManager.GetActiveScene().name == "Mapa Tres")
+        {
+            SceneManager.LoadScene("Menu");
+        }
+        else
         portalActivo = true;
         animator.SetTrigger("Activar");
         portalCollider.enabled = true;

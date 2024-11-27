@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 6201834384584567333}
   - component: {fileID: 5293773116975224573}
   - component: {fileID: 8224683337498106824}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Enemy1Final
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -190,12 +190,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   chara: {fileID: 11400000, guid: 2163341103106124aa2364bc94cf5307, type: 2}
+  canvasVida: {fileID: 0}
   healthBar: {fileID: 8880369240694063578}
   enemyData: {fileID: 11400000, guid: 590711cc38efdab459ec01985bfd57b9, type: 2}
   weaponList:
   - {fileID: 11400000, guid: 74dfc468c8075814394a8df3354412d5, type: 2}
   - {fileID: 11400000, guid: 2010958dd9e29ef469b80d2586f1ef5a, type: 2}
   enemyID: 7
+  currentHealth: 0
 --- !u!1 &2465405185093889969
 GameObject:
   m_ObjectHideFlags: 0
@@ -207,7 +209,7 @@ GameObject:
   - component: {fileID: 8155008946700371160}
   - component: {fileID: 365133975128522910}
   - component: {fileID: 6954455815787555835}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -315,7 +317,7 @@ GameObject:
   - component: {fileID: 5985969560471717011}
   - component: {fileID: 7067742289103572593}
   - component: {fileID: 1884910440311275653}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: HitboxAttack2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -467,7 +469,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8016875335158837956}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: spawnerBall
   m_TagString: Untagged
   m_Icon: {fileID: -5487077368411116049, guid: 0000000000000000d000000000000000, type: 0}
@@ -664,6 +666,22 @@ PrefabInstance:
     - target: {fileID: 5198721746220597191, guid: e001519ab160a8640aa4cf95f8c897ab, type: 3}
       propertyPath: m_Layer
       value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5198721746642634422, guid: e001519ab160a8640aa4cf95f8c897ab, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: -15.92
+      objectReference: {fileID: 0}
+    - target: {fileID: 5198721746642634422, guid: e001519ab160a8640aa4cf95f8c897ab, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5198721746642634422, guid: e001519ab160a8640aa4cf95f8c897ab, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0.049999237
+      objectReference: {fileID: 0}
+    - target: {fileID: 5198721746642634422, guid: e001519ab160a8640aa4cf95f8c897ab, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5198721746642634425, guid: e001519ab160a8640aa4cf95f8c897ab, type: 3}
       propertyPath: m_Layer

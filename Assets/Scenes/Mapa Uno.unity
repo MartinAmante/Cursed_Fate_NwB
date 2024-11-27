@@ -5113,6 +5113,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 656464525}
+  - component: {fileID: 656464526}
   m_Layer: 0
   m_Name: PlayerSpawner
   m_TagString: PlayerSpawner
@@ -5135,6 +5136,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &656464526
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 656464524}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5b14735a01895847b23fe3ff38e0a49, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 2071817541936590199}
 --- !u!1 &700068319
 GameObject:
   m_ObjectHideFlags: 0
@@ -8474,7 +8488,7 @@ PrefabInstance:
     - target: {fileID: 1807532773049855575, guid: 06c8ba64f8a4a9042816f0ee1feb550c, type: 3}
       propertyPath: playerPosition
       value: 
-      objectReference: {fileID: 5852407645339224502}
+      objectReference: {fileID: 3266403960767525251}
     - target: {fileID: 3994248515513419896, guid: 06c8ba64f8a4a9042816f0ee1feb550c, type: 3}
       propertyPath: m_LocalPosition.x
       value: 41.563328
@@ -11544,8 +11558,12 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 3201522640866873226, guid: f7933188ff5b14e448baf180dfccae84, type: 3}
+      propertyPath: waitTime
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3201522640866873226, guid: f7933188ff5b14e448baf180dfccae84, type: 3}
       propertyPath: maxEnemies
-      value: 4
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 3201522640866873226, guid: f7933188ff5b14e448baf180dfccae84, type: 3}
       propertyPath: enemyTypes.Array.size
@@ -11554,7 +11572,7 @@ PrefabInstance:
     - target: {fileID: 3201522640866873226, guid: f7933188ff5b14e448baf180dfccae84, type: 3}
       propertyPath: enemyTypes.Array.data[0]
       value: 
-      objectReference: {fileID: 5549504312352842491, guid: 7e3d36ee0d0d568459fcb4f60058c797, type: 3}
+      objectReference: {fileID: 4072772681555660770, guid: 649807ae19b5d794e85852b428c7dfeb, type: 3}
     - target: {fileID: 3201522640866873226, guid: f7933188ff5b14e448baf180dfccae84, type: 3}
       propertyPath: enemyTypes.Array.data[1]
       value: 
@@ -14654,6 +14672,11 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &2071817541936590199 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7255323814555599021, guid: 8ed1af788d4d42042b1851bdaccce72e, type: 3}
+  m_PrefabInstance: {fileID: 8678583277407792602}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2111643300311938371
 GameObject:
   m_ObjectHideFlags: 0
@@ -14766,11 +14789,6 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
---- !u!1 &2371784527336529971 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7255323814555599021, guid: 8ed1af788d4d42042b1851bdaccce72e, type: 3}
-  m_PrefabInstance: {fileID: 8678583277407792602}
-  m_PrefabAsset: {fileID: 0}
 --- !u!224 &2373929199031103006
 RectTransform:
   m_ObjectHideFlags: 0
@@ -14831,6 +14849,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PauseMenue: {fileID: 7410904077142400553}
   SalirMenue: {fileID: 4697763800186331478}
+  player: {fileID: 0}
   Pause: 0
 --- !u!1 &2475567521584558380
 GameObject:
@@ -14946,6 +14965,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8399511869222858121}
   m_CullTransparentMesh: 1
+--- !u!4 &3266403960767525251 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6135060043993930841, guid: 8ed1af788d4d42042b1851bdaccce72e, type: 3}
+  m_PrefabInstance: {fileID: 8678583277407792602}
+  m_PrefabAsset: {fileID: 0}
 --- !u!222 &3363344778376272292
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -15729,7 +15753,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2371784527336529971}
+  m_GameObject: {fileID: 2071817541936590199}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 168512b6d8cff734a81551f15828a131, type: 3}
@@ -15744,7 +15768,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2371784527336529971}
+  m_GameObject: {fileID: 2071817541936590199}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: aa82f4c286b9ceb438c58e2f5e334d88, type: 3}
@@ -15753,11 +15777,6 @@ MonoBehaviour:
   player: {fileID: 11400000, guid: 15b8dfbd1dd209f40a37a838b8b3516d, type: 2}
   chest: {fileID: 11400000, guid: 6680be92af72a4b489445417333ef89d, type: 2}
   chestBehaviour: {fileID: 0}
---- !u!4 &5852407645339224502 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 6135060043993930841, guid: 8ed1af788d4d42042b1851bdaccce72e, type: 3}
-  m_PrefabInstance: {fileID: 8678583277407792602}
-  m_PrefabAsset: {fileID: 0}
 --- !u!224 &5878511344429558623
 RectTransform:
   m_ObjectHideFlags: 0
@@ -16319,6 +16338,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PauseMenue: {fileID: 7410904077142400553}
   SalirMenue: {fileID: 4697763800186331478}
+  player: {fileID: 0}
   Pause: 0
 --- !u!1001 &7720967239090613535
 PrefabInstance:
@@ -16820,6 +16840,10 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 7255323814555599021, guid: 8ed1af788d4d42042b1851bdaccce72e, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7474950113663505413, guid: 8ed1af788d4d42042b1851bdaccce72e, type: 3}
       propertyPath: m_Enabled
       value: 1
@@ -16970,7 +16994,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cameraPlayer: {fileID: 9037702810128887064}
-  player: {fileID: 2371784527336529971}
+  player: {fileID: 0}
 --- !u!1 &9050935063311041437
 GameObject:
   m_ObjectHideFlags: 0

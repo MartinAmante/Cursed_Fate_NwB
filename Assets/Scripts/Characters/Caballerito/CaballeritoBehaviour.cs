@@ -27,11 +27,13 @@ public class CaballeritoBehaviour : MonoBehaviour
     {
         attackProgress = 0f;
         playerPosition = GameObject.FindGameObjectWithTag("Player").transform;
+
     }
 
     // Update is called once per frame
     void Update()
     {
+        //playerPosition = GameObject.FindGameObjectWithTag("Player").transform;
         if (enemyPosition != null)
         {
             distance = Vector2.Distance(transform.position, enemyPosition.position);

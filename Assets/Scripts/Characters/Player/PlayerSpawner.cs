@@ -5,9 +5,15 @@ using UnityEngine;
 public class PlayerSpawner : MonoBehaviour
 {
     [SerializeField] public GameObject player;
+    //[SerializeField] public GameObject playerFinal;
     // Start is called before the first frame update
+    private void Awake()
+    {
+        //Instantiate(playerFinal);
+    }
     void Start()
     {
+        
         player = GameObject.FindGameObjectWithTag("Player");
         player.transform.position = transform.position;
     }

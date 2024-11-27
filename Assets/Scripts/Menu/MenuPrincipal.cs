@@ -9,7 +9,7 @@ public class MenuPrincipal : MonoBehaviour
     public Transform player;
     public float duracion = 2f;
     public Animator puertaAnim;
-    
+    [SerializeField] public CharacterData PlayerData;
     AudioManager audioManager;
 
     private void Awake()
@@ -46,7 +46,9 @@ public class MenuPrincipal : MonoBehaviour
 
     public void CambioNivel()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);     
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        PlayerData.Lifes = 3;
+        PlayerData.Health = PlayerData.MaxHealth;
     }
 
     public void OptionMenu(string NombreMenu)

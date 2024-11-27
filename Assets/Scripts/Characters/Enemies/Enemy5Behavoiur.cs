@@ -105,8 +105,20 @@ public class Enemy5Behavoiur : MonoBehaviour
             rb.velocity = direccion * demonData.chara.RunSpeed;
             demonData.chara.IsWalking = true;
         }
+        Flip();
     }
+    void Flip()
+    {
 
+        if (jugador.position.x < transform.position.x)
+        {
+            transform.localScale = new Vector3(-8f, 8f, 0f);
+        }
+        else
+        {
+            transform.localScale = new Vector3(8f, 8f, 0f);
+        }
+    }
     void AtacarJugador()
     {
         rb.velocity = Vector2.zero;

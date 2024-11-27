@@ -13,7 +13,8 @@ public class MenuMuerte : MonoBehaviour
         string lastLevel = PlayerPrefs.GetString("LastLevel", "DefaultSceneName"); // "Nivel1" es un valor por defecto
         SceneManager.LoadScene(lastLevel);
         PlayerData.IsAlive = true;
-        PlayerData.MaxLifes = 3;
+        PlayerData.Lifes = 3;
+        PlayerData.Health = PlayerData.MaxHealth;
 
     }
 
@@ -22,6 +23,7 @@ public class MenuMuerte : MonoBehaviour
         SceneManager.LoadScene(NombreMenu);
         Time.timeScale = 1;
         PlayerData.IsAlive = true;
-        PlayerData.MaxLifes = 3;
+        PlayerData.Lifes = 3;
+        PlayerData.Health = PlayerData.MaxHealth;
     }
 }

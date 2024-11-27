@@ -45,6 +45,7 @@ public class SeekerBehaviour : MonoBehaviour
         {
             ManejarPersecucionJugador();
         }
+        Flip();
     }
 
     void ManejarMovimientoNormal()
@@ -114,8 +115,20 @@ public class SeekerBehaviour : MonoBehaviour
             rb.velocity = direccion * seekerData.chara.RunSpeed;
             seekerData.chara.IsWalking = true;
         }
+        
     }
+    void Flip()
+    {
 
+        if (jugador.position.x < transform.position.x)
+        {
+            transform.localScale = new Vector3(-1.5f, 1.5f,0f);
+        }
+        else
+        {
+            transform.localScale = new Vector3(1.5f, 1.5f, 0f);
+        }
+    }
     void AtacarJugador()
     {
         rb.velocity = Vector2.zero;

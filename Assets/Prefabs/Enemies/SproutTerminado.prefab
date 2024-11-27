@@ -128,7 +128,7 @@ CapsuleCollider2D:
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 256
+    m_Bits: 264
   m_LayerOverridePriority: 0
   m_ForceSendLayers:
     serializedVersion: 2
@@ -142,7 +142,7 @@ CapsuleCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -272,6 +272,7 @@ MonoBehaviour:
   weaponList:
   - {fileID: 11400000, guid: cde6deb2816329a488bf28136c1c6d53, type: 2}
   enemyID: 1
+  currentHealth: 0
 --- !u!114 &4870111540757958990
 MonoBehaviour:
   m_ObjectHideFlags: 0

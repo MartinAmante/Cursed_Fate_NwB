@@ -9,15 +9,23 @@ public class Enemy : Character{
     //[SerializeField] private WeaponData weaponData;
     [SerializeField] private List<WeaponData> weaponList = new();
     [SerializeField] private int enemyID;
+    [SerializeField] public float currentHealth;
     public override void CheckHealth(){
         if(chara.Health <= 0){
             chara.IsAlive = false;
+            GameObject.FindGameObjectWithTag("Portal").GetComponent<Portal>().EnemigoEliminado();
             Destroy(gameObject, enemyData.WaitTime);
         }
         
 
     }
-      void Start()
+    private void Update()
+    {
+        healthBar.maxValue = chara.MaxHealth;
+        healthBar.value = chara.Health;
+        currentHealth = chara.Health;
+    }
+    void Start()
     {
         switch (enemyID)
         {
@@ -28,7 +36,7 @@ public class Enemy : Character{
                 chara.Lifes = chara.MaxLifes;
                 chara.MaxLifes = 1;
                 chara.WeaponList = weaponList;
-                chara.RunSpeed = 4;
+                chara.RunSpeed = 10;
                 chara.IsAttacking = false;
                 break;
             /*          Skeleton                 */
@@ -88,7 +96,7 @@ public class Enemy : Character{
                 chara.Lifes = chara.MaxLifes;
                 chara.MaxLifes = 1;
                 chara.WeaponList = weaponList;
-                chara.RunSpeed = 3;
+                chara.RunSpeed = 2;
                 chara.IsAttacking = false;
                 break;
             /*         New Enemy 2             */

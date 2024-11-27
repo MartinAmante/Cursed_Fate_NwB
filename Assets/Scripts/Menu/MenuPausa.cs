@@ -10,12 +10,17 @@ public class MenuPausa : MonoBehaviour
     public GameObject PauseMenue;
 
     public GameObject SalirMenue;
+    public GameObject player;
 
     public bool Pause = false;
 
 
 
     // Update is called once per frame
+    private void Awake()
+    {
+        player = GameObject.FindGameObjectWithTag("Player");
+    }
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Escape))
