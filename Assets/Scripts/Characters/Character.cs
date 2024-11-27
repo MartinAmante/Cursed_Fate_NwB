@@ -13,8 +13,6 @@ public abstract class Character : MonoBehaviour{
 
     private void Awake()
     {
-        
-
         if (gameObject.tag == "Enemy") 
 
         {

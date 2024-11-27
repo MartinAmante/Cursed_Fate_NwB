@@ -13,6 +13,7 @@ TagManager:
   - Audio
   - Wall
   - PlayerSlider
+  - INICIO
   layers:
   - Default
   - TransparentFX

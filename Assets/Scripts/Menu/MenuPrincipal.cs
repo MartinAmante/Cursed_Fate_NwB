@@ -7,7 +7,7 @@ public class MenuPrincipal : MonoBehaviour
 {
     public Transform camara;
     public Transform player;
-    public Player playerFinal;
+    //public Player playerFinal;
     public float duracion = 2f;
     public Animator puertaAnim;
     [SerializeField] public CharacterData playerData;
@@ -20,7 +20,7 @@ public class MenuPrincipal : MonoBehaviour
 
     private void Start()
     {
-        playerFinal = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
+        //playerFinal = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
         //playerData = playerFinal.GetComponent<CharacterData>();
     }
 
@@ -54,8 +54,6 @@ public class MenuPrincipal : MonoBehaviour
     public void CambioNivel()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
-        playerFinal.chara.Lifes = 3;
-        playerFinal.chara.Health = playerFinal.chara.MaxHealth;
     }
 
     public void OptionMenu(string NombreMenu)

@@ -7,6 +7,7 @@ public class EnemyAnimation : MonoBehaviour{
     [SerializeField] private EnemyData enemyData;
     [SerializeField]private SpriteRenderer sprite;
     [SerializeField]private Animator anim;
+    public AudioManager audioManager;
 
     void Update(){
         //sprite.flipX = enemy.IsTurning;
@@ -18,6 +19,7 @@ public class EnemyAnimation : MonoBehaviour{
         anim.SetBool("isAttacking", enemy.chara.IsAttacking);
         anim.SetBool("isAttackingTwo", enemy.chara.IsAttackingTwo);
         anim.SetBool("isHurt", enemy.chara.IsHurt);
+        if (enemy.chara.IsHurt) { audioManager.PlaySFX(audioManager.Hit); }
         anim.SetBool("isAttackOnCooldown", enemy.chara.IsAttackOnCooldown);
         anim.SetBool("isOnFire", enemy.chara.IsOnFire);
         anim.SetInteger("idWeapon", enemy.chara.Weapon);
@@ -31,4 +33,9 @@ public class EnemyAnimation : MonoBehaviour{
         anim.SetBool("isDashing", enemy.chara.IsDashing);
         anim.SetBool("isDashOnCooldown", enemy.chara.IsDashOnCooldown);
     }
+    private void Awake()
+    {
+        audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
+    }
+    
 }

@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement; // Importa SceneManagement para gestionar escenas
+using UnityEngine.SceneManagement;
 
 public class AudioManager : MonoBehaviour
 {
@@ -11,10 +11,11 @@ public class AudioManager : MonoBehaviour
 
     [Header("---------Audio Clip---------")]
     public AudioClip MainMenu;
-    public AudioClip MenuSelect;
+    public AudioClip MusicLevel;
     public AudioClip MenuUpDown;
     public AudioClip Door;
     public AudioClip Portal;
+    public AudioClip Hit;
 
     private static AudioManager instance;
 
@@ -24,7 +25,7 @@ public class AudioManager : MonoBehaviour
         if (instance == null)
         {
             instance = this;
-            DontDestroyOnLoad(gameObject); // Evita que se destruya entre escenas
+            DontDestroyOnLoad(gameObject);
         }
         else
         {
@@ -32,42 +33,41 @@ public class AudioManager : MonoBehaviour
             return;
         }
     }
-
     private void Start()
     {
         musicSource.clip = MainMenu;
         musicSource.Play();
-
-        // Suscribimos un método para cuando cambie la escena
         SceneManager.sceneLoaded += OnSceneLoaded;
     }
 
     private void OnDestroy()
     {
-        // Desuscribimos para evitar errores si el objeto se destruye
         SceneManager.sceneLoaded -= OnSceneLoaded;
     }
 
-    private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
-        if (scene.name == "Opciones")
+        switch (scene.name)
         {
-            // Aquí puedes ajustar el audio al entrar a Opciones
-            // Ejemplo: musicSource.volume = 0.5f; o musicSource.Pause();
-        }
-        else if (scene.name == "Menu")
-        {
-            // Si vuelves al menú, puedes restaurar el audio como prefieras
-            if (!musicSource.isPlaying)
-            {
-                musicSource.clip = MainMenu;
-                musicSource.Play();
-            }
-        }
-        else if (scene.name == "Mapa Uno") // Cambia "Nivel" por el nombre de tu escena de juego
-        {
-            // Detenemos la música al entrar al nivel
-            musicSource.Stop();
+            case "Menu":
+                if (!musicSource.isPlaying)
+                {
+                    musicSource.clip = MainMenu;
+                    musicSource.Play();
+                }
+                break;
+
+            case "Mapa Uno":
+                if (!musicSource.isPlaying)
+                {
+                    musicSource.clip = MusicLevel;
+                    musicSource.Play();
+                }
+                break;
+
+            default:
+                // Opcional: manejar casos no previstos
+                break;
         }
     }
 

@@ -20,14 +20,19 @@ public class PlayerInput : MonoBehaviour {
     public static InteractChestInput interactChest;
 
     void Update() {
-        if (player.IsAlive)
+        if (player.IsAlive && direction != null)
         {
-            direction(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
-            if (Input.GetButton("Dash")) dash();
-            if (Input.GetButton("Attack")) attack();
-            if (Input.GetButton("Protect")) { protect(); } else { protectRelease(); }
-            if (Input.GetButton("Interact")) interact();
-            if (Input.GetButton("Interact"))interactChest(); 
+            Inputs();
         }
+    }
+
+    void Inputs()
+    {
+        direction(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical") );
+        if (Input.GetButton("Dash")) dash();
+        if (Input.GetButton("Attack")) attack();
+        if (Input.GetButton("Protect")) { protect(); } else { protectRelease(); }
+        if (Input.GetButton("Interact")) interact();
+        if (Input.GetButton("Interact")) interactChest();
     }
 }

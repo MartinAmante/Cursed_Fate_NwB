@@ -5597,9 +5597,9 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 24300002, guid: 1b8bda80413da2543ba0006dddbd6977, type: 2}
-  m_audioClip: {fileID: 8300000, guid: 139d3dc2f34a59445aa6107df3459006, type: 3}
+  m_audioClip: {fileID: 8300000, guid: d5508fbccad0d4746900f53c6273ca5d, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.4
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -12318,7 +12318,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 326955867623107814, guid: 9f4f7a890ef61914fbdfa1a686e4f9bc, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 326955867623107814, guid: 9f4f7a890ef61914fbdfa1a686e4f9bc, type: 3}
       propertyPath: m_AnchorMax.y
@@ -12326,7 +12326,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 326955867623107814, guid: 9f4f7a890ef61914fbdfa1a686e4f9bc, type: 3}
       propertyPath: m_AnchorMin.x
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 604343128513600998, guid: 9f4f7a890ef61914fbdfa1a686e4f9bc, type: 3}
       propertyPath: m_SortingOrder
@@ -12458,7 +12458,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2507614674084317614, guid: 9f4f7a890ef61914fbdfa1a686e4f9bc, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2507614674084317614, guid: 9f4f7a890ef61914fbdfa1a686e4f9bc, type: 3}
       propertyPath: m_AnchorMax.y
@@ -12470,7 +12470,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3641709240544880103, guid: 9f4f7a890ef61914fbdfa1a686e4f9bc, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3641709240544880103, guid: 9f4f7a890ef61914fbdfa1a686e4f9bc, type: 3}
       propertyPath: m_AnchorMax.y
@@ -12602,7 +12602,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7009042395748178320, guid: 9f4f7a890ef61914fbdfa1a686e4f9bc, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7009042395748178320, guid: 9f4f7a890ef61914fbdfa1a686e4f9bc, type: 3}
       propertyPath: m_AnchorMax.y
@@ -12610,11 +12610,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7009042395748178320, guid: 9f4f7a890ef61914fbdfa1a686e4f9bc, type: 3}
       propertyPath: m_AnchorMin.x
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7041930234686977774, guid: 9f4f7a890ef61914fbdfa1a686e4f9bc, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7041930234686977774, guid: 9f4f7a890ef61914fbdfa1a686e4f9bc, type: 3}
       propertyPath: m_AnchorMax.y
@@ -12622,7 +12622,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7041930234686977774, guid: 9f4f7a890ef61914fbdfa1a686e4f9bc, type: 3}
       propertyPath: m_AnchorMin.x
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7069086906068165641, guid: 9f4f7a890ef61914fbdfa1a686e4f9bc, type: 3}
       propertyPath: m_SortingOrder
@@ -12670,7 +12670,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8895913148790445511, guid: 9f4f7a890ef61914fbdfa1a686e4f9bc, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8895913148790445511, guid: 9f4f7a890ef61914fbdfa1a686e4f9bc, type: 3}
       propertyPath: m_AnchorMax.y
@@ -17016,8 +17016,8 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 2884051933190459160}
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
+        m_MethodName: 
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine

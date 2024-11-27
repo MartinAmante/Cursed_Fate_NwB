@@ -7612,9 +7612,9 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 374768000}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 043f91b8f0084a0488af357609c38c42, type: 3}
+  m_Script: {fileID: 11500000, guid: 27adb1a7da64d0a40871443a26ef8f2f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   cameraPlayer: {fileID: 374768002}
@@ -21284,10 +21284,11 @@ MonoBehaviour:
   musicSource: {fileID: 1707187249}
   SFXSource: {fileID: 1246768173}
   MainMenu: {fileID: 8300000, guid: ae928da84102a7c42a89cef3d257332a, type: 3}
-  MenuSelect: {fileID: 8300000, guid: 60d6af11e89537044ac2cdd5b0f6564b, type: 3}
+  MusicLevel: {fileID: 0}
   MenuUpDown: {fileID: 8300000, guid: ae8623306ddc04747bc78770e769f0b4, type: 3}
   Door: {fileID: 8300000, guid: c0d2f62a74a2291459a02e791eec7372, type: 3}
   Portal: {fileID: 8300000, guid: cd783293103f71140b433079a6f5b5a4, type: 3}
+  Hit: {fileID: 8300000, guid: ccea79e4d86370d4580a83bf9168af7e, type: 3}
 --- !u!1 &681288698
 GameObject:
   m_ObjectHideFlags: 0
@@ -21382,10 +21383,9 @@ GameObject:
   m_Component:
   - component: {fileID: 713652963}
   - component: {fileID: 713652965}
-  - component: {fileID: 713652966}
   m_Layer: 0
   m_Name: player
-  m_TagString: Player
+  m_TagString: INICIO
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -21432,18 +21432,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &713652966
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 713652962}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9152fa68f5597a84f94229675e9e33a7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &716172743
 GameObject:
   m_ObjectHideFlags: 0
@@ -22844,13 +22832,13 @@ MonoBehaviour:
     serializedVersion: 2
     rgba: 4294967295
   m_fontColor: {r: 1, g: 1, b: 1, a: 1}
-  m_enableVertexGradient: 0
+  m_enableVertexGradient: 1
   m_colorMode: 3
   m_fontColorGradient:
-    topLeft: {r: 1, g: 1, b: 1, a: 1}
-    topRight: {r: 1, g: 1, b: 1, a: 1}
-    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
-    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+    topLeft: {r: 0.03137255, g: 0.13333334, b: 1, a: 1}
+    topRight: {r: 0.48235294, g: 0.019607844, b: 0.019607844, a: 1}
+    bottomLeft: {r: 0.8862745, g: 0.41568628, b: 0.41568628, a: 1}
+    bottomRight: {r: 0.07450981, g: 0.011764706, b: 0.011764706, a: 1}
   m_fontColorGradientPreset: {fileID: 0}
   m_spriteAsset: {fileID: 0}
   m_tintAllSprites: 0
@@ -28530,10 +28518,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   camara: {fileID: 374768003}
   player: {fileID: 713652963}
-  playerFinal: {fileID: 0}
   duracion: 2
   puertaAnim: {fileID: 1611128275}
-  playerData: {fileID: 0}
+  playerData: {fileID: 11400000, guid: 15b8dfbd1dd209f40a37a838b8b3516d, type: 2}
 --- !u!225 &1986674776
 CanvasGroup:
   m_ObjectHideFlags: 0

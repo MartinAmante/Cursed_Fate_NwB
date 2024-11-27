@@ -14,7 +14,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   weapon: 0
   weaponList: []
-  detectionRange: 4.65
+  detectionRange: 15
+  detectionSpawn: 0
   reactionTime: 0.8
   waitTime: 1
-  isAlert: 0
+  detectionAttack: 0
+  isCooldown: 0
+  isCooldownAnimTwo: 0
+  isCooldownMid: 0
+  isAlert: 1
+  isSpawning: 0
+  isCooldownAttack: 0
+  isCooldownAttackTwo: 0
+  isTakingDamage: 0

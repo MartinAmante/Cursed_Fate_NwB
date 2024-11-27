@@ -24,7 +24,11 @@ public class PlayerSpawner : MonoBehaviour
     }
     void Start()
     {
-        Instantiate(player);
+        if (playerCount < 1)
+        {
+            Instantiate(player);
+        }
+        
         if (player == null)
         {
             player = GameObject.FindGameObjectWithTag("Player");

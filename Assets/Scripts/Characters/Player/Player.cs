@@ -9,11 +9,13 @@ public class Player : Character{
     [SerializeField] private GameObject playerSpawner;
     public static GameObject instance;
 
+    private void Awake()
+    {
+        chara.Lifes = 3;
+        chara.Health = chara.MaxHealth;
+    }
 
-  
     private void Start(){
-        canvasVida = GameObject.FindGameObjectWithTag("PlayerSlider");
-        healthBar = canvasVida.GetComponentInChildren<Slider>();
         playerSpawner = GameObject.FindGameObjectWithTag("PlayerSpawner");
         transform.position = playerSpawner.transform.position;
         GetComponent<Collider2D>().enabled = true;
@@ -27,7 +29,8 @@ public class Player : Character{
     }
     private void Update()
     {
-        
+        canvasVida = GameObject.FindGameObjectWithTag("PlayerSlider");
+        healthBar = canvasVida.GetComponentInChildren<Slider>();
         healthBar.maxValue = chara.MaxHealth;
         healthBar.value = chara.Health;
         chara.IsWaiting = !(!chara.IsAlive || chara.IsWalking || chara.IsAttacking || chara.IsAttackingFire || chara.IsDashing || chara.IsProtecting);
@@ -57,6 +60,7 @@ public class Player : Character{
                 chara.IsAlive = false;
                 PlayerPrefs.SetString("LastLevel", SceneManager.GetActiveScene().name);
                 SceneManager.LoadScene("SceneMuerte");
+                Cursor.visible = true;
 
             }
         }
