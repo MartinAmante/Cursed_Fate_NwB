@@ -50,13 +50,13 @@
 
 El repositorio incluye la documentación técnica y de diseño desarrollada durante la producción de **Cursed Fate**:
 
-1. **[GDD — Game Design Document](Documentación_final_Cursed_Fate.pdf)**  
+1. **[GDD — Game Design Document](GDD_Cursed_of_Fate.pdf)**  
    Documento de diseño que presenta las mecánicas del juego, diseño de niveles, tipos de enemigos y sistema de progresión.
 
-2. **[Documentación Final y Post-Mortem](./Documentation/Documentación%20final%20Cursed%20Fate.pdf)**  
+2. **[Documentación Final](Documentación_final_Cursed_Fate.pdf)**  
    Documentación final del proyecto que incluye el plan de QA, balance de costos y presupuesto, matriz de riesgos y lecciones aprendidas.
 
-3. **[Plan de Marketing](./Documentation/Plan%20De%20Marketing%20Cursed%20Fate.pdf)**  
+3. **[Plan de Marketing](Plan_De_Marketing_Cursed_Fate.pdf)**  
    Documento que presenta la estrategia de prelanzamiento, propuesta de valor y segmentación de la audiencia.
 
 ---
